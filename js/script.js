@@ -4,7 +4,7 @@
 
 // ===== CONFIGURAÇÕES =====
 // Substitua pelo número de WhatsApp oficial (no formato internacional: 55 + DDD + número)
-const whatsappNumber = "5511999999999"; // exemplo: 55 (Brasil) + 11 (DDD SP) + número
+const whatsappNumber = "5511994504082"; // exemplo: 55 (Brasil) + 11 (DDD SP) + número
 
 // ===== BOTÃO WHATSAPP =====
 const whatsappBtn = document.getElementById("whatsappBtn");
@@ -71,3 +71,4 @@ animatedElements.forEach((el) => {
   el.style.opacity = 0;
   observer.observe(el);
 });
+
