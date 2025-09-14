@@ -1,149 +1,268 @@
-<!DOCTYPE html>
+<!-- index.html
+  Site profissional para Tatiana Scabello Constantino
+  Estrutura esperada do repositório:
+  site-tatiana/
+  ├── index.html
+  ├── css/
+  │   └── style.css
+  ├── js/
+  │   └── script.js
+  ├── images/
+  │   ├── consultorio.jpg
+  │   └── foto-perfil.jpg
+
+  --> 
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <!-- 
-    CHECKLIST DE EDIÇÃO:
-    - Estrutura de pastas já configurada:
-      site-tatiana/
-      ├── index.html
-      ├── css/style.css
-      ├── js/script.js
-      ├── images/
-          ├── consultorio.jpg
-          ├── foto-perfil.jpg
-          ├── usp-logo.jpg
-          ├── iamspe.jpg
-          ├── psiquiatria.jpg
-          ├── endocanabinoide.jpg
-    - Substitua textos dummy pelas suas descrições reais.
-    - Troque imagens em /images mantendo os nomes ou atualize os paths.
-    - Edite o número do WhatsApp em script.js.
-    - Publique no GitHub Pages: 
-      Configurações → Pages → Branch main → Save.
-  -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Site profissional da Dra. Tatiana Scabello Constantino, médica psiquiatra em São Paulo, Pinheiros. Tratamentos psiquiátricos, medicina endocanabinóide e psicoterapia psicanalítica.">
-  <title>Tatiana Scabello Constantino | Psiquiatra</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Tatiana Scabello Constantino — Psiquiatra em Pinheiros, São Paulo. Psiquiatria clínica, medicina endocanabinóide e psicoterapia psicanalítica." />
+  <title>Tatiana Scabello Constantino — Psiquiatra</title>
+
+  <!-- Link para o CSS (enviarei o conteúdo depois) -->
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Tipografia -->
-  <!-- Para alterar: troque os links ou mude no CSS -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Ícone de atalho (opcional) - substitua pelo seu favicon se desejar -->
+  <link rel="icon" href="images/favicon.png" type="image/png" />
+
+  <!-- Fonte: use system fonts para manter sofisticação e desempenho -->
 </head>
 <body>
-  <!-- ===== HEADER / NAVBAR ===== -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">Dra. Tatiana Scabello</div>
-      <ul class="nav-links">
-        <li><a href="#home">Início</a></li>
-        <li><a href="#sobre">Sobre mim</a></li>
-        <li><a href="#areas">Áreas de atuação</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
+  <!-- Cabeçalho fixo -->
+  <header id="site-header" class="header">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="Página inicial - Tatiana Scabello">
+        <!-- Substitua por um SVG ou imagem de logo, se desejar -->
+        <img src="images/foto-perfil.jpg" alt="Foto de Tatiana Scabello" class="brand-photo">
+        <span class="brand-name">Tatiana Scabello Constantino</span>
+        <small class="brand-sub">Médica Psiquiatra — FMRP-USP • IAMSPE</small>
+      </a>
+
+      <nav class="nav" aria-label="Menu principal">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#areas" class="nav-link">Áreas</a>
+        <a href="#servicos" class="nav-link">Serviços</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </nav>
+
+      <!-- Botão para abrir menu mobile (JS controla visibilidade) -->
+      <button class="nav-toggle" aria-label="Abrir menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+    </div>
   </header>
 
+  <!-- HERO / HOME -->
   <main>
-    <!-- ===== HERO / HOME ===== -->
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <h1>Bem-vindo(a)</h1>
-        <p>Sou Tatiana Scabello Constantino, médica psiquiatra formada pela FMRP-USP e com residência em Psiquiatria pelo IAMSPE. Atuo em São Paulo, principalmente no bairro de Pinheiros, com dedicação a tratamentos psiquiátricos de excelência.</p>
-        <a href="#contato" class="btn-primary">Marcar consulta</a>
-      </div>
-    </section>
+    <section id="home" class="hero" role="region" aria-label="Apresentação">
+      <!-- Fundo impactante: substitua images/consultorio.jpg por outra imagem se quiser -->
+      <div class="hero-bg" style="background-image: url('images/consultorio.jpg');"></div>
 
-    <!-- ===== SOBRE MIM ===== -->
-    <section id="sobre" class="section">
-      <div class="container">
-        <h2>Sobre mim</h2>
-        <div class="sobre-grid">
-          <img src="images/foto-perfil.jpg" alt="Foto da Dra. Tatiana Scabello Constantino" class="perfil-img">
-          <div>
-            <p>[TEXTO DUMMY] Minha trajetória acadêmica teve início na Faculdade de Medicina de Ribeirão Preto da USP, onde desenvolvi sólida base científica e humanística. Durante esse período, participei de atividades de pesquisa e extensão que reforçaram meu interesse pela compreensão integral do ser humano e dos transtornos mentais.</p>
-            <p>[TEXTO DUMMY] Após a graduação, realizei residência médica em Psiquiatria no Hospital do Servidor Estadual (IAMSPE), em São Paulo, onde tive contato com uma ampla variedade de quadros clínicos, tanto em atendimentos ambulatoriais quanto em unidades de internação. Essa experiência me proporcionou prática clínica abrangente e aprofundada.</p>
-            <p>[TEXTO DUMMY] Hoje, aplico essa formação em meu consultório em Pinheiros, com abordagem individualizada, empática e ética. Busco integrar conhecimento científico atualizado com a escuta atenta, proporcionando cuidados que consideram a singularidade de cada paciente.</p>
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+        <div class="hero-card">
+          <h1 class="hero-title">Tatiana Scabello Constantino</h1>
+          <p class="hero-subtitle">Médica Psiquiatra — FMRP-USP | Residência em Psiquiatria, IAMSPE</p>
+
+          <!-- Texto dummy longo para você substituir posteriormente -->
+          <p class="hero-intro">
+            Sou médica psiquiatra com formação sólida em instituições reconhecidas, atuando em São Paulo, 
+            com consultório em Pinheiros. Minha prática clínica integra abordagens contemporâneas em
+            psiquiatria, medicina endocanabinóide e psicoterapia de orientação psicanalítica, sempre com
+            foco na individualidade do paciente, segurança e evidência científica. Atendo em formato presencial
+            e online, priorizando um ambiente terapêutico ético, confidencial e acolhedor para pacientes de padrão
+            de vida alto que buscam cuidado especializado.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contato">Quero marcar uma consulta</a>
+            <a class="btn btn-ghost" href="#sobre">Mais sobre minha formação</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== ÁREAS DE ATUAÇÃO ===== -->
-    <section id="areas" class="section alt-bg">
+    <!-- SOBRE -->
+    <section id="sobre" class="section" aria-label="Sobre Tatiana">
+      <div class="container section-grid">
+        <div class="section-media">
+          <!-- Use uma imagem institucional (ex.: logo USP/IAMSPE) em images/ -->
+          <img src="images/foto-perfil.jpg" alt="Foto de Tatiana Scabello" class="perfil-img">
+        </div>
+
+        <div class="section-body">
+          <h2>Sobre mim</h2>
+
+          <!-- Texto dummy longo e detalhado para futura substituição -->
+          <p>
+            Tatiana Scabello Constantino é graduada pela Faculdade de Medicina de Ribeirão Preto da USP (FMRP-USP),
+            com residência médica em Psiquiatria no Hospital do Servidor Estadual (IAMSPE). Ao longo de sua formação e prática,
+            Tatiana dedicou-se ao estudo das bases biológicas dos transtornos psiquiátricos, bem como às intervenções psicoterapêuticas
+            de longa duração. Seu trabalho alia rigor clínico, sensibilidade psicanalítica e interesse por terapias integradas.
+          </p>
+
+          <p>
+            Abordagem terapêutica: A prática clínica privilegia uma escuta aprofundada e uma formulação compreensiva do sofrimento psíquico.
+            Integro intervenções farmacológicas baseadas em evidências com psicoterapia de orientação psicanalítica, sempre avaliando
+            riscos, benefícios e as preferências do paciente.
+          </p>
+
+          <!-- Espaço para inserir logos institucionais (opcional) -->
+          <div class="institutions">
+            <!-- troque os src pelos logos reais em images/ (ex: images/usp-logo.png) -->
+            <img src="images/logo-usp.png" alt="Logo USP (substitua se desejar)" class="inst-logo">
+            <img src="images/logo-iamspe.png" alt="Logo IAMSPE (substitua se desejar)" class="inst-logo">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ÁREAS DE ATUAÇÃO -->
+    <section id="areas" class="section section-alt" aria-label="Áreas de atuação">
       <div class="container">
         <h2>Áreas de atuação</h2>
+
         <div class="cards">
-          <!-- Card Psiquiatria -->
-          <div class="card">
-            <img src="images/psiquiatria.jpg" alt="Imagem ilustrativa representando a psiquiatria">
-            <h3>Tratamento de Transtornos Psiquiátricos</h3>
-            <p>[TEXTO DUMMY] A psiquiatria é a especialidade médica dedicada ao diagnóstico, tratamento e prevenção de transtornos mentais. Atuo em condições como depressão, ansiedade, transtorno bipolar e outras, utilizando abordagem baseada em evidências científicas e adaptada às necessidades de cada paciente.</p>
-            <p>[TEXTO DUMMY] O tratamento pode incluir medicamentos modernos, psicoterapia de apoio e acompanhamento contínuo, sempre priorizando a qualidade de vida e a recuperação funcional do indivíduo.</p>
-            <p>[TEXTO DUMMY] O cuidado é realizado de forma humanizada, com atenção às particularidades da vida pessoal, profissional e familiar de cada paciente.</p>
-          </div>
-          <!-- Card Endocanabinoide -->
-          <div class="card">
-            <img src="images/endocanabinoide.jpg" alt="Imagem ilustrativa sobre medicina endocanabinóide">
+          <article class="card">
+            <h3>Psiquiatria Clínica</h3>
+            <p class="muted">Avaliação diagnóstica, manejo farmacoterápico e acompanhamento longitudinal.</p>
+            <p>
+              Texto explicativo extenso: descrição acessível sobre o que é a psiquiatria, quais transtornos são comumente avaliados (ex.: depressão, transtornos de ansiedade, transtorno bipolar, transtornos do sono, entre outros),
+              como funciona a avaliação inicial, rotina de acompanhamento e critérios de encaminhamento para terapias específicas.
+            </p>
+          </article>
+
+          <article class="card">
             <h3>Medicina Endocanabinóide</h3>
-            <p>[TEXTO DUMMY] A medicina endocanabinóide envolve a utilização de compostos derivados da cannabis para fins terapêuticos, sempre com prescrição médica responsável e acompanhamento rigoroso. Essa abordagem pode ser indicada em casos selecionados de dor crônica, ansiedade, epilepsia e outras condições.</p>
-            <p>[TEXTO DUMMY] O sistema endocanabinóide é parte fundamental da regulação de funções como sono, humor e memória. Quando indicado, o tratamento com canabinoides pode oferecer melhora significativa da qualidade de vida.</p>
-            <p>[TEXTO DUMMY] O objetivo é sempre integrar essa possibilidade terapêutica de forma segura, científica e individualizada, respeitando as regulamentações brasileiras.</p>
-          </div>
-          <!-- Card Psicoterapia -->
-          <div class="card">
-            <img src="images/consultorio.jpg" alt="Imagem ilustrativa de psicoterapia psicanalítica">
-            <h3>Psicoterapia de Orientação Psicanalítica</h3>
-            <p>[TEXTO DUMMY] A psicoterapia psicanalítica é uma modalidade de tratamento que visa explorar conteúdos inconscientes, auxiliando o paciente a compreender melhor seus conflitos internos, padrões de comportamento e formas de se relacionar.</p>
-            <p>[TEXTO DUMMY] Essa abordagem proporciona espaço para reflexão, autoconhecimento e desenvolvimento emocional, favorecendo mudanças profundas e duradouras.</p>
-            <p>[TEXTO DUMMY] O processo é construído em conjunto entre terapeuta e paciente, em ambiente seguro e ético, sempre com respeito ao ritmo individual de cada um.</p>
-          </div>
+            <p class="muted">Abordagem guiada por evidências e avaliação individualizada.</p>
+            <p>
+              Texto explicativo extenso: introdução ao sistema endocanabinóide, uso terapêutico de canabinóides sob supervisão médica, indicações potenciais,
+              limites, segurança, monitoramento e integração com outras modalidades terapêuticas. Observações sobre legalidade e necessidade de
+              atuação criteriosa e informada por evidências.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Psicoterapia de orientação psicanalítica</h3>
+            <p class="muted">Processos terapêuticos de profundidade com foco em subjetividade.</p>
+            <p>
+              Texto explicativo extenso: princípios da psicanálise aplicada na prática clínica, duração e frequência típicas, exemplos de objetivos terapêuticos,
+              e como a psicoterapia pode ser combinada com intervenções farmacológicas quando necessário.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ===== SERVIÇOS ===== -->
-    <section id="servicos" class="section">
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="section" aria-label="Serviços">
       <div class="container">
         <h2>Serviços</h2>
-        <p>[TEXTO DUMMY] Ofereço atendimento psiquiátrico especializado em consultório particular localizado em Pinheiros, São Paulo, em espaço moderno e acolhedor. Os serviços incluem consultas iniciais para avaliação diagnóstica completa, acompanhamento terapêutico em médio e longo prazo, além de suporte em situações emergenciais específicas.</p>
-        <p>[TEXTO DUMMY] Também realizo atendimentos online, possibilitando que pacientes de diferentes regiões tenham acesso a cuidados médicos de qualidade. Essa modalidade é conduzida com a mesma seriedade e ética do atendimento presencial, seguindo as normas do Conselho Federal de Medicina.</p>
-        <p>[TEXTO DUMMY] Em todos os formatos, o foco está em oferecer tratamento de excelência, integrando recursos farmacológicos, psicoterapêuticos e, quando indicado, medicina endocanabinóide.</p>
-      </div>
-    </section>
 
-    <!-- ===== CONTATO ===== -->
-    <section id="contato" class="section alt-bg">
-      <div class="container">
-        <h2>Contato</h2>
-        <form id="contact-form">
-          <label for="nome">Nome</label>
-          <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
-          <button type="submit" class="btn-primary">Marcar consulta pelo WhatsApp</button>
-          <!-- ⚠️ INSTRUÇÃO: Para trocar o número do WhatsApp, edite no arquivo js/script.js -->
-        </form>
+        <div class="service-grid">
+          <div class="service">
+            <h4>Atendimento Presencial</h4>
+            <p>
+              Consultório em Pinheiros, São Paulo — ambiente privado, acessível e reservado. O atendimento presencial inclui avaliações diagnósticas,
+              acompanhamento medicamentoso, sessões de psicoterapia e intervenções integradas quando indicadas.
+            </p>
+            <p class="muted">Horários: agendar previamente. Endereço aproximado disponível após contato.</p>
+          </div>
 
-        <!-- Google Maps -->
-        <div class="map-container">
-          <!-- ⚠️ Para alterar localização ou zoom, substitua a URL abaixo -->
-          <iframe 
-            src="https://www.google.com/maps?q=Pinheiros,+São+Paulo+SP&output=embed"
-            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
-          </iframe>
+          <div class="service">
+            <h4>Atendimento Online</h4>
+            <p>
+              Sessões por videoconferência com protocolos de segurança e privacidade. Ótimo para pacientes que residem fora de São Paulo ou preferem
+              atendimento remoto por conveniência. Realizo avaliações iniciais e seguimentos com a mesma abordagem ética e clínica do atendimento presencial.
+            </p>
+            <p class="muted">Plataformas: Zoom/Google Meet (a definir no agendamento).</p>
+          </div>
+
+          <div class="service">
+            <h4>Aconselhamento em Medicina Endocanabinóide</h4>
+            <p>
+              Avaliação criteriosa da indicação, histórico clínico, riscos e monitoramento contínuo. Explicação detalhada dos potenciais efeitos adversos
+              e interação medicamentosa. Procedimento realizado com responsabilidade e em conformidade com a legislação vigente.
+            </p>
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section section-cta" aria-label="Contato">
+      <div class="container contact-grid">
+        <div class="contact-form">
+          <h2>Contato</h2>
+
+          <!-- Formulário simples: nome apenas, botão WhatsApp.
+               O comportamento do botão (abrir WhatsApp com mensagem) é implementado em js/script.js -->
+          <form id="contactForm" onsubmit="return false;">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" autocomplete="name">
+
+            <!-- Campo de telefone não obrigatório aqui; WhatsApp será aberto via script com número configurado em script.js -->
+            <button id="whatsappBtn" class="btn btn-primary" type="button" aria-label="Enviar mensagem via WhatsApp">
+              Enviar mensagem por WhatsApp
+            </button>
+
+            <p class="help">
+              Ao clicar, você será direcionado para o WhatsApp (web/APP) com a mensagem pronta. Se quiser, substitua o número do WhatsApp no arquivo js/script.js.
+            </p>
+          </form>
+        </div>
+
+        <div class="contact-info">
+          <h3>Localização</h3>
+
+          <!-- Google Maps embed fixo em Pinheiros (coordenadas aproximadas). 
+               Se desejar um pin mais preciso, substitua as coordenadas no atributo src do iframe. -->
+          <div class="map-wrap" aria-hidden="false">
+            <iframe
+              title="Localização em Pinheiros, São Paulo"
+              src="https://www.google.com/maps?q=-23.564,-46.699&z=15&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              frameborder="0"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <div class="address">
+            <p><strong>Consultório:</strong> Pinheiros, São Paulo — SP (endereço completo fornecido após agendamento)</p>
+            <p><strong>Atendimento:</strong> Presencial e online</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>
+          <small>© <span id="year"></span> Tatiana Scabello Constantino — Todos os direitos reservados.</small>
+        </div>
+        <div class="footer-links">
+          <a href="#politica">Política de Privacidade</a>
+          <a href="#termos">Termos de Uso</a>
+        </div>
+      </div>
+    </footer>
   </main>
 
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Dra. Tatiana Scabello Constantino. Todos os direitos reservados.</p>
-    </div>
-  </footer>
+  <!-- Script principal (enviarei o conteúdo em script.js) -->
+  <script src="js/script.js" defer></script>
 
-  <script src="js/script.js"></script>
+  <!-- Comentários rápidos sobre edição:
+       - Substitua imagens em /images/ (consultorio.jpg, foto-perfil.jpg, logos)
+       - Altere o texto longo (dummy) nas seções Sobre/Áreas/Serviços/Contato para o conteúdo final
+       - Configure o número de WhatsApp no arquivo js/script.js (variável JS: whatsappNumber)
+       - Ajuste as coordenadas do mapa no iframe se quiser um pino mais preciso
+       - O CSS (css/style.css) conterá paleta de cores e animações suaves (fade-in / slide-in)
+  -->
+
 </body>
 </html>
