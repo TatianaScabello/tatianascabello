@@ -1,268 +1,311 @@
-<!-- index.html
-  Site profissional para Tatiana Scabello Constantino
-  Estrutura esperada do repositório:
-  site-tatiana/
-  ├── index.html
-  ├── css/
-  │   └── style.css
-  ├── js/
-  │   └── script.js
-  ├── images/
-  │   ├── consultorio.jpg
-  │   └── foto-perfil.jpg
+<!-- File: site-tatiana/index.html
+     Descrição:
+     - Página inicial completa (estrutura, conteúdo dummy longo, seções e marcações para edição).
+     - Referência a css/style.css e js/script.js (serão enviados depois).
+     Como editar:
+     - Substitua textos marcados com <!-- EDITAR -->.
+     - Troque as imagens em /images/ conforme indicado.
+     - Edite o número do WhatsApp na variável data-whatsapp no botão (ou no js/script.js).
+-->
 
-  --> 
 <!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Tatiana Scabello Constantino — Psiquiatra em Pinheiros, São Paulo. Psiquiatria clínica, medicina endocanabinóide e psicoterapia psicanalítica." />
-  <title>Tatiana Scabello Constantino — Psiquiatra</title>
+  <title>Tatiana Scabello Constantino — Psiquiatria em Pinheiros, SP</title>
+  <meta name="description" content="Tatiana Scabello Constantino — Médica psiquiatra (FMRP-USP). Atendimentos em Pinheiros, São Paulo. Psiquiatria, Medicina Endocanabinóide, Psicoterapia psicanalítica.">
+  <!-- Google Fonts: Montserrat (sans), Playfair Display (serif) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Icons (opcional) - você pode baixar localmente se preferir -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pb3XbH6k3o2c5WZ9gqT9Vw0b1h6qK3h9JQv1r1qZxk1Q2l9Q9z1B2nF1Y8M3J4R6" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Link para o CSS (enviarei o conteúdo depois) -->
+  <!-- CSS principal (será enviado em seguida como css/style.css) -->
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Ícone de atalho (opcional) - substitua pelo seu favicon se desejar -->
-  <link rel="icon" href="images/favicon.png" type="image/png" />
-
-  <!-- Fonte: use system fonts para manter sofisticação e desempenho -->
+  <!-- Meta tags para redes sociais (ex.: substituir imagem) -->
+  <meta property="og:title" content="Tatiana Scabello Constantino — Psiquiatra">
+  <meta property="og:description" content="Psiquiatria, Medicina Endocanabinóide e Psicoterapia Psicanalítica — Atendimentos em Pinheiros, SP">
+  <meta property="og:image" content="images/consultorio.jpg"> <!-- EDITAR: imagem de preview -->
+  <meta property="og:type" content="website">
 </head>
 <body>
-  <!-- Cabeçalho fixo -->
-  <header id="site-header" class="header">
+  <!-- HEADER FIXO -->
+  <header class="site-header">
     <div class="container header-inner">
-      <a href="#home" class="brand" aria-label="Página inicial - Tatiana Scabello">
-        <!-- Substitua por um SVG ou imagem de logo, se desejar -->
-        <img src="images/foto-perfil.jpg" alt="Foto de Tatiana Scabello" class="brand-photo">
-        <span class="brand-name">Tatiana Scabello Constantino</span>
-        <small class="brand-sub">Médica Psiquiatra — FMRP-USP • IAMSPE</small>
+      <a class="brand" href="#home">
+        <!-- Nome em destaque -->
+        <span class="brand-name">Tatiana Scabello <strong>Constantino</strong></span>
+        <small class="brand-sub">Médica Psiquiatra — FMRP-USP | Residência: IAMSPE</small>
       </a>
 
-      <nav class="nav" aria-label="Menu principal">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#sobre" class="nav-link">Sobre</a>
-        <a href="#areas" class="nav-link">Áreas</a>
-        <a href="#servicos" class="nav-link">Serviços</a>
-        <a href="#contato" class="nav-link">Contato</a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="#home">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#areas">Áreas</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
       </nav>
 
-      <!-- Botão para abrir menu mobile (JS controla visibilidade) -->
       <button class="nav-toggle" aria-label="Abrir menu">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        <i class="fa fa-bars"></i>
       </button>
     </div>
   </header>
 
-  <!-- HERO / HOME -->
-  <main>
-    <section id="home" class="hero" role="region" aria-label="Apresentação">
-      <!-- Fundo impactante: substitua images/consultorio.jpg por outra imagem se quiser -->
-      <div class="hero-bg" style="background-image: url('images/consultorio.jpg');"></div>
+  <!-- HERO: imagem de fundo ou vídeo sutil + efeito de texto digitado/fade -->
+  <section id="home" class="hero section--parallax">
+    <!-- Opção A (imagem de fundo): altera em css/style.css background-image
+         Imagem sugerida: images/consultorio.jpg (já na sua estrutura).
+         Se preferir vídeo, substitua o bloco abaixo por um <video> cobrindo o hero. -->
+    <div class="hero-overlay">
+      <div class="container hero-inner">
+        <div class="hero-profile">
+          <img src="images/foto-perfil.jpg" alt="Foto profissional de Tatiana Scabello" class="profile-photo">
+        </div>
 
-      <div class="hero-overlay"></div>
+        <div class="hero-copy">
+          <h1 class="hero-title">
+            <!-- Nome em destaque elegante -->
+            Tatiana Scabello <span class="accent">Constantino</span>
+          </h1>
 
-      <div class="container hero-content">
-        <div class="hero-card">
-          <h1 class="hero-title">Tatiana Scabello Constantino</h1>
-          <p class="hero-subtitle">Médica Psiquiatra — FMRP-USP | Residência em Psiquiatria, IAMSPE</p>
-
-          <!-- Texto dummy longo para você substituir posteriormente -->
-          <p class="hero-intro">
-            Sou médica psiquiatra com formação sólida em instituições reconhecidas, atuando em São Paulo, 
-            com consultório em Pinheiros. Minha prática clínica integra abordagens contemporâneas em
-            psiquiatria, medicina endocanabinóide e psicoterapia de orientação psicanalítica, sempre com
-            foco na individualidade do paciente, segurança e evidência científica. Atendo em formato presencial
-            e online, priorizando um ambiente terapêutico ético, confidencial e acolhedor para pacientes de padrão
-            de vida alto que buscam cuidado especializado.
+          <p class="hero-subtitle">
+            Médica psiquiatra — FMRP-USP · Residência em Psiquiatria no IAMSPE.
           </p>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#contato">Quero marcar uma consulta</a>
-            <a class="btn btn-ghost" href="#sobre">Mais sobre minha formação</a>
+          <!-- Texto dinâmico: efeito digitado/fade-in será implementado em js/script.js -->
+          <div class="typed-wrap" aria-hidden="false">
+            <span id="typed-text" class="typed-text" data-strings='[
+              "Psiquiatria clínica e consultiva",
+              "Medicina Endocanabinóide aplicada",
+              "Psicoterapia de orientação psicanalítica"
+            ]'></span>
+            <span class="typed-cursor">|</span>
+          </div>
+
+          <div class="hero-cta">
+            <!-- EDITAR: substituir número do WhatsApp no data-whatsapp OU no script.js -->
+            <a class="btn btn-primary" id="btn-agendar" data-whatsapp="+5511999999999" href="#" title="Agendar via WhatsApp">Agendar Consulta</a>
+            <a class="btn btn-ghost" href="#sobre">Sobre a Doutora</a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- SOBRE -->
-    <section id="sobre" class="section" aria-label="Sobre Tatiana">
-      <div class="container section-grid">
-        <div class="section-media">
-          <!-- Use uma imagem institucional (ex.: logo USP/IAMSPE) em images/ -->
-          <img src="images/foto-perfil.jpg" alt="Foto de Tatiana Scabello" class="perfil-img">
-        </div>
-
-        <div class="section-body">
+  <!-- SOBRE MIM -->
+  <section id="sobre" class="section about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
           <h2>Sobre mim</h2>
-
-          <!-- Texto dummy longo e detalhado para futura substituição -->
           <p>
-            Tatiana Scabello Constantino é graduada pela Faculdade de Medicina de Ribeirão Preto da USP (FMRP-USP),
-            com residência médica em Psiquiatria no Hospital do Servidor Estadual (IAMSPE). Ao longo de sua formação e prática,
-            Tatiana dedicou-se ao estudo das bases biológicas dos transtornos psiquiátricos, bem como às intervenções psicoterapêuticas
-            de longa duração. Seu trabalho alia rigor clínico, sensibilidade psicanalítica e interesse por terapias integradas.
+            <!-- LONG TEXT DUMMY para facilitar edição posterior -->
+            <!-- EDITAR: substitua todo o parágrafo abaixo pelo seu texto definitivo -->
+            Sou Tatiana Scabello Constantino, médica psiquiatra formada pela Faculdade de Medicina de Ribeirão Preto da USP (FMRP-USP), com residência médica em Psiquiatria no Hospital do Servidor Estadual (IAMSPE). Atuo na cidade de São Paulo, com consultório localizado no bairro de Pinheiros, atendendo pacientes em contextos presenciais e online. Minha prática clínica integra técnicas farmacológicas baseadas em evidência, abordagens psicoterápicas de orientação psicanalítica e avanços da medicina endocanabinóide quando apropriado.
           </p>
 
           <p>
-            Abordagem terapêutica: A prática clínica privilegia uma escuta aprofundada e uma formulação compreensiva do sofrimento psíquico.
-            Integro intervenções farmacológicas baseadas em evidências com psicoterapia de orientação psicanalítica, sempre avaliando
-            riscos, benefícios e as preferências do paciente.
+            <!-- Texto adicional de exemplo (conteúdo longo para substituição posterior) -->
+            Tenho experiência no manejo de transtornos do humor, ansiedade, transtornos do sono, transtornos alimentares, e em avaliações clínicas complexas que demandam articulação interdisciplinar. Minha abordagem prioriza a escuta qualificada, individualização do tratamento e acompanhamento longitudinal.
           </p>
 
-          <!-- Espaço para inserir logos institucionais (opcional) -->
+          <!-- Logos institucionais (adicione os arquivos em /images/ se desejar) -->
           <div class="institutions">
-            <!-- troque os src pelos logos reais em images/ (ex: images/usp-logo.png) -->
-            <img src="images/logo-usp.png" alt="Logo USP (substitua se desejar)" class="inst-logo">
-            <img src="images/logo-iamspe.png" alt="Logo IAMSPE (substitua se desejar)" class="inst-logo">
+            <figure>
+              <img src="images/usp-logo.png" alt="Logo USP" class="institution-logo"> <!-- opcional: adicionar images/usp-logo.png -->
+              <figcaption>Faculdade de Medicina de Ribeirão Preto — USP</figcaption>
+            </figure>
+            <figure>
+              <img src="images/iamspe-logo.png" alt="Logo IAMSPE" class="institution-logo"> <!-- opcional: adicionar images/iamspe-logo.png -->
+              <figcaption>Hospital do Servidor Estadual (IAMSPE)</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <aside class="about-aside">
+          <!-- Blocos com efeito parallax/scroll reveal (estilizados em css) -->
+          <div class="card about-card">
+            <h3>Formação</h3>
+            <p>Graduação: FMRP-USP · Residência: IAMSPE · Cursos e atualizações em Psiquiatria Clínica e Medicina Endocanabinóide.</p>
+          </div>
+
+          <div class="card about-card">
+            <h3>Abordagem</h3>
+            <p>Integração entre intervenção medicamentosa baseada em evidência, psicoterapia psicanalítica e avaliação personalizada do uso terapêutico de canabinóides quando aconselhável.</p>
+          </div>
+
+          <div class="card about-card">
+            <h3>Atendimento</h3>
+            <p>Consultório em Pinheiros (SP) — sessões presenciais e atendimento online seguro.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÁREAS DE ATUAÇÃO (cards interativos) -->
+  <section id="areas" class="section areas">
+    <div class="container">
+      <h2>Áreas de atuação</h2>
+      <p class="lead">Atuação clínica especializada em:</p>
+
+      <div class="areas-grid">
+        <!-- Cada card terá hover/zoom/sombra via CSS; ícones animados podem ser adicionados -->
+        <article class="area-card" data-area="psiquiatria">
+          <div class="area-media">
+            <i class="fa-solid fa-brain icon-area"></i>
+          </div>
+          <h3>Psiquiatria Clínica</h3>
+          <p>Diagnóstico e tratamento de transtornos do humor, ansiedade, transtornos psicóticos, transtornos do sono e acompanhamento farmacoterápico especializado.</p>
+          <p class="long-text">Texto dummy extenso: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod, nisl a efficitur porttitor, arcu neque posuere odio, in sodales urna urna non dui. Integer vitae sem vitae arcu pellentesque faucibus.</p>
+        </article>
+
+        <article class="area-card" data-area="endocanabinoide">
+          <div class="area-media">
+            <i class="fa-solid fa-leaf icon-area"></i>
+          </div>
+          <h3>Medicina Endocanabinóide</h3>
+          <p>Avaliação criteriosa e individualizada do papel dos canabinóides na prática clínica, com ênfase em segurança, interação medicamentosa e evidência científica.</p>
+          <p class="long-text">Texto dummy extenso: Proin eget lorem vel tortor volutpat elementum. Etiam in nunc sed nisl pulvinar posuere. Cras faucibus, arcu non facilisis pretium, urna magna ultricies augue, in luctus tortor lectus nec magna.</p>
+        </article>
+
+        <article class="area-card" data-area="psicanalitica">
+          <div class="area-media">
+            <i class="fa-solid fa-comments icon-area"></i>
+          </div>
+          <h3>Psicoterapia Psicanalítica</h3>
+          <p>Processos terapêuticos de orientação psicanalítica para tratamento de conflitos intrapsíquicos, sofrimento subjetivo e promoção de insight.</p>
+          <p class="long-text">Texto dummy extenso: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="section services section--alt">
+    <div class="container">
+      <h2>Serviços</h2>
+      <p class="lead">Atendimentos e modalidades</p>
+
+      <div class="services-grid">
+        <div class="service-block">
+          <h3>Atendimento Presencial</h3>
+          <p>Consultório localizado em Pinheiros — ambiente discreto, seguro e confortável, com horários flexíveis para pacientes locais.</p>
+          <ul>
+            <li>Consultas iniciais (avaliação detalhada)</li>
+            <li>Retorno e seguimento</li>
+            <li>Avaliação para tratamentos específicos</li>
+          </ul>
+        </div>
+
+        <div class="service-block">
+          <h3>Atendimento Online</h3>
+          <p>Plataforma segura para atendimentos remotos, recomendada para pacientes que residem em outras cidades ou viajam frequentemente.</p>
+          <ul>
+            <li>Plataforma protegida e confidencial</li>
+            <li>Agendamento simples via WhatsApp</li>
+          </ul>
+        </div>
+
+        <div class="service-pricing">
+          <h3>Forma de apresentação</h3>
+          <!-- Tabela estilizada ou blocos visuais serão implementados em css -->
+          <div class="pricing-cards">
+            <div class="pricing-card">
+              <h4>Consulta Inicial</h4>
+              <p>Descrição detalhada, duração e objetivos da consulta inicial. (texto dummy longo para personalizar depois)</p>
+            </div>
+            <div class="pricing-card">
+              <h4>Sessões de Acompanhamento</h4>
+              <p>Sessões regulares com plano terapêutico individualizado. (texto dummy longo)</p>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ÁREAS DE ATUAÇÃO -->
-    <section id="areas" class="section section-alt" aria-label="Áreas de atuação">
-      <div class="container">
-        <h2>Áreas de atuação</h2>
-
-        <div class="cards">
-          <article class="card">
-            <h3>Psiquiatria Clínica</h3>
-            <p class="muted">Avaliação diagnóstica, manejo farmacoterápico e acompanhamento longitudinal.</p>
-            <p>
-              Texto explicativo extenso: descrição acessível sobre o que é a psiquiatria, quais transtornos são comumente avaliados (ex.: depressão, transtornos de ansiedade, transtorno bipolar, transtornos do sono, entre outros),
-              como funciona a avaliação inicial, rotina de acompanhamento e critérios de encaminhamento para terapias específicas.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Medicina Endocanabinóide</h3>
-            <p class="muted">Abordagem guiada por evidências e avaliação individualizada.</p>
-            <p>
-              Texto explicativo extenso: introdução ao sistema endocanabinóide, uso terapêutico de canabinóides sob supervisão médica, indicações potenciais,
-              limites, segurança, monitoramento e integração com outras modalidades terapêuticas. Observações sobre legalidade e necessidade de
-              atuação criteriosa e informada por evidências.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Psicoterapia de orientação psicanalítica</h3>
-            <p class="muted">Processos terapêuticos de profundidade com foco em subjetividade.</p>
-            <p>
-              Texto explicativo extenso: princípios da psicanálise aplicada na prática clínica, duração e frequência típicas, exemplos de objetivos terapêuticos,
-              e como a psicoterapia pode ser combinada com intervenções farmacológicas quando necessário.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVIÇOS -->
-    <section id="servicos" class="section" aria-label="Serviços">
-      <div class="container">
-        <h2>Serviços</h2>
-
-        <div class="service-grid">
-          <div class="service">
-            <h4>Atendimento Presencial</h4>
-            <p>
-              Consultório em Pinheiros, São Paulo — ambiente privado, acessível e reservado. O atendimento presencial inclui avaliações diagnósticas,
-              acompanhamento medicamentoso, sessões de psicoterapia e intervenções integradas quando indicadas.
-            </p>
-            <p class="muted">Horários: agendar previamente.</p>
-          </div>
-
-          <div class="service">
-            <h4>Atendimento Online</h4>
-            <p>
-              Sessões por videoconferência com protocolos de segurança e privacidade. Ótimo para pacientes que residem fora de São Paulo ou preferem
-              atendimento remoto por conveniência. Realizo avaliações iniciais e seguimentos com a mesma abordagem ética e clínica do atendimento presencial.
-            </p>
-            <p class="muted">Plataformas: Zoom/Google Meet (a definir no agendamento).</p>
-          </div>
-
-          <div class="service">
-            <h4>Aconselhamento em Medicina Endocanabinóide</h4>
-            <p>
-              Avaliação criteriosa da indicação, histórico clínico, riscos e monitoramento contínuo. Explicação detalhada dos potenciais efeitos adversos
-              e interação medicamentosa. Procedimento realizado com responsabilidade e em conformidade com a legislação vigente.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTATO -->
-    <section id="contato" class="section section-cta" aria-label="Contato">
-      <div class="container contact-grid">
+  <!-- CONTATO -->
+  <section id="contato" class="section contact">
+    <div class="container">
+      <h2>Contato</h2>
+      <div class="contact-grid">
         <div class="contact-form">
-          <h2>Contato</h2>
-
-          <!-- Formulário simples: nome apenas, botão WhatsApp.
-               O comportamento do botão (abrir WhatsApp com mensagem) é implementado em js/script.js -->
-          <form id="contactForm" onsubmit="return false;">
+          <form id="form-contato" action="#" novalidate>
             <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" placeholder="Seu nome" autocomplete="name">
+            <input id="nome" name="nome" type="text" placeholder="Seu nome completo" />
 
-            <!-- Campo de telefone não obrigatório aqui; WhatsApp será aberto via script com número configurado em script.js -->
-            <button id="whatsappBtn" class="btn btn-primary" type="button" aria-label="Enviar mensagem via WhatsApp">
-              Enviar mensagem por WhatsApp
-            </button>
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" placeholder="seu@exemplo.com" />
 
-            <p class="help">
-              Ao clicar, você será direcionado para o WhatsApp (web/APP) com a mensagem pronta.
-            </p>
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem..."></textarea>
+
+            <div class="form-actions">
+              <!-- Botão que envia mensagem via WhatsApp com texto condicionado pelo campo Nome.
+                   O atributo data-whatsapp pode conter o número no formato internacional (+55...)
+                   Caso prefira, altere o número aqui ou no js/script.js -->
+              <button type="button" id="btn-whatsapp" class="btn btn-primary" data-whatsapp="+5511999999999">
+                <i class="fa fa-whatsapp"></i> Enviar via WhatsApp
+              </button>
+
+              <button type="submit" class="btn btn-ghost">Enviar por E-mail (opcional)</button>
+            </div>
+
+            <p class="form-note">Ao clicar em "Enviar via WhatsApp", uma mensagem será construída automaticamente. Se o campo "Nome" estiver vazio, a mensagem será genérica conforme exigido.</p>
           </form>
         </div>
 
         <div class="contact-info">
-          <h3>Localização</h3>
-
-          <!-- Google Maps embed fixo em Pinheiros (coordenadas aproximadas). 
-               Se desejar um pin mais preciso, substitua as coordenadas no atributo src do iframe. -->
-          <div class="map-wrap" aria-hidden="false">
-            <iframe
-              title="Localização em Pinheiros, São Paulo"
-              src="https://www.google.com/maps?q=-23.564,-46.699&z=15&output=embed"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              frameborder="0"
-              allowfullscreen>
-            </iframe>
+          <div class="contact-card">
+            <h3>Localização</h3>
+            <p>Pinheiros — São Paulo, SP (endereço completo pode ser adicionado aqui)</p>
+            <!-- MAPA INTERATIVO: Google Maps embed centralizado em Pinheiros, São Paulo-SP -->
+            <!-- EDITAR: se quiser coordenadas exatas, substitua o src do iframe -->
+            <div class="map-wrapper">
+              <iframe
+                title="Mapa - Pinheiros, São Paulo"
+                src="https://www.google.com/maps?q=Pinheiros,+São+Paulo+SP&output=embed"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
           </div>
 
-          <div class="address">
-            <p><strong>Consultório:</strong> Pinheiros, São Paulo — SP (endereço completo fornecido após agendamento)</p>
-            <p><strong>Atendimento:</strong> Presencial e online</p>
+          <div class="contact-card">
+            <h3>Atendimento</h3>
+            <p>Presencial e Online · Horários sob agendamento.</p>
+            <p><strong>Telefone / WhatsApp:</strong> <span id="whatsapp-display">+55 (11) 99999-9999</span></p> <!-- EDITAR: número -->
+            <p><strong>E-mail:</strong> contato@seudominio.com</p> <!-- EDITAR -->
+          </div>
+
+          <div class="contact-card">
+            <h3>Observações</h3>
+            <p>Informações sobre convênios, política de cancelamento, e orientações pré-consulta podem ser inseridas aqui.</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- RODAPÉ -->
-    <footer class="footer">
-      <div class="container footer-inner">
-        <div>
-          <small>© <span id="year"></span> Tatiana Scabello Constantino — Todos os direitos reservados.</small>
-        </div>
-        <div class="footer-links">
-          <a href="#politica">Política de Privacidade</a>
-          <a href="#termos">Termos de Uso</a>
-        </div>
+  <!-- RODAPÉ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p>&copy; <span id="current-year"></span> Dra. Tatiana Scabello Constantino — Todos os direitos reservados.</p>
       </div>
-    </footer>
-  </main>
+      <div class="footer-right">
+        <nav class="footer-nav">
+          <a href="#home">Início</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#contato">Contato</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
 
-  <!-- Script principal (enviarei o conteúdo em script.js) -->
+  <!-- SCRIPTS -->
+  <!-- O arquivo js/script.js será enviado em seguida -->
   <script src="js/script.js" defer></script>
-
-  <!-- Comentários rápidos sobre edição:
-       - Substitua imagens em /images/ (consultorio.jpg, foto-perfil.jpg, logos)
-       - Altere o texto longo (dummy) nas seções Sobre/Áreas/Serviços/Contato para o conteúdo final
-       - Configure o número de WhatsApp no arquivo js/script.js (variável JS: whatsappNumber)
-       - Ajuste as coordenadas do mapa no iframe se quiser um pino mais preciso
-       - O CSS (css/style.css) conterá paleta de cores e animações suaves (fade-in / slide-in)
-  -->
-
 </body>
 </html>
