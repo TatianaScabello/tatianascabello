@@ -1,311 +1,153 @@
-<!-- File: site-tatiana/index.html
-     Descrição:
-     - Página inicial completa (estrutura, conteúdo dummy longo, seções e marcações para edição).
-     - Referência a css/style.css e js/script.js (serão enviados depois).
-     Como editar:
-     - Substitua textos marcados com <!-- EDITAR -->.
-     - Troque as imagens em /images/ conforme indicado.
-     - Edite o número do WhatsApp na variável data-whatsapp no botão (ou no js/script.js).
--->
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tatiana Scabello Constantino — Psiquiatria em Pinheiros, SP</title>
-  <meta name="description" content="Tatiana Scabello Constantino — Médica psiquiatra (FMRP-USP). Atendimentos em Pinheiros, São Paulo. Psiquiatria, Medicina Endocanabinóide, Psicoterapia psicanalítica.">
-  <!-- Google Fonts: Montserrat (sans), Playfair Display (serif) -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Icons (opcional) - você pode baixar localmente se preferir -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pb3XbH6k3o2c5WZ9gqT9Vw0b1h6qK3h9JQv1r1qZxk1Q2l9Q9z1B2nF1Y8M3J4R6" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- CSS principal (será enviado em seguida como css/style.css) -->
+  <meta charset="UTF-8">
+  <title>Tatiana Scabello Constantino | Psiquiatria em São Paulo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- IMPORTANTE: edite favicon e meta tags se desejar -->
   <link rel="stylesheet" href="css/style.css">
-
-  <!-- Meta tags para redes sociais (ex.: substituir imagem) -->
-  <meta property="og:title" content="Tatiana Scabello Constantino — Psiquiatra">
-  <meta property="og:description" content="Psiquiatria, Medicina Endocanabinóide e Psicoterapia Psicanalítica — Atendimentos em Pinheiros, SP">
-  <meta property="og:image" content="images/consultorio.jpg"> <!-- EDITAR: imagem de preview -->
-  <meta property="og:type" content="website">
 </head>
 <body>
-  <!-- HEADER FIXO -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#home">
-        <!-- Nome em destaque -->
-        <span class="brand-name">Tatiana Scabello <strong>Constantino</strong></span>
-        <small class="brand-sub">Médica Psiquiatra — FMRP-USP | Residência: IAMSPE</small>
-      </a>
 
-      <nav class="main-nav" aria-label="Navegação principal">
-        <a href="#home">Início</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#areas">Áreas</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#contato">Contato</a>
-      </nav>
+<header id="main-header">
+  <div class="container header-container">
+    <div class="logo">Tatiana Scabello Constantino</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#sobre">Sobre mim</a></li>
+        <li><a href="#areas">Áreas de atuação</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-      <button class="nav-toggle" aria-label="Abrir menu">
-        <i class="fa fa-bars"></i>
-      </button>
+<main>
+
+<section id="home" class="hero">
+  <div class="overlay"></div>
+  <div class="container hero-content">
+    <h1>Psiquiatria com sofisticação, ciência e sensibilidade</h1>
+    <p>Atendimento premium em Pinheiros, São Paulo, com foco em saúde mental integral.</p>
+  </div>
+</section>
+
+<section id="sobre" class="section">
+  <div class="container">
+    <h2>Sobre mim</h2>
+    <div class="grid-2">
+      <div>
+        <p>Tatiana Scabello Constantino é médica psiquiatra formada pela Faculdade de Medicina de Ribeirão Preto da Universidade de São Paulo (FMRP-USP), uma das instituições mais respeitadas da América Latina. Sua trajetória acadêmica sólida reflete um profundo compromisso com a excelência clínica e científica.</p>
+        <p>Concluiu residência médica em Psiquiatria no Hospital do Servidor Estadual (IAMSPE), onde adquiriu ampla experiência no manejo de quadros psiquiátricos complexos, sempre com olhar humanizado e integrado ao contexto de vida do paciente.</p>
+        <p>Atua em São Paulo, especialmente no bairro de Pinheiros, atendendo um público de alto padrão, que busca não apenas tratamento, mas também acolhimento, discrição e sofisticação em saúde mental.</p>
+      </div>
+      <!-- Edite o caminho da imagem conforme desejar -->
+      <img src="images/foto-perfil.jpg" alt="Tatiana Scabello Constantino">
     </div>
-  </header>
+  </div>
+</section>
 
-  <!-- HERO: imagem de fundo ou vídeo sutil + efeito de texto digitado/fade -->
-  <section id="home" class="hero section--parallax">
-    <!-- Opção A (imagem de fundo): altera em css/style.css background-image
-         Imagem sugerida: images/consultorio.jpg (já na sua estrutura).
-         Se preferir vídeo, substitua o bloco abaixo por um <video> cobrindo o hero. -->
-    <div class="hero-overlay">
-      <div class="container hero-inner">
-        <div class="hero-profile">
-          <img src="images/foto-perfil.jpg" alt="Foto profissional de Tatiana Scabello" class="profile-photo">
-        </div>
+<section id="areas" class="section alt-bg">
+  <div class="container">
+    <h2>Áreas de atuação</h2>
+    <p>O trabalho clínico de Tatiana Scabello Constantino abrange uma ampla gama de transtornos psiquiátricos, incluindo depressão, ansiedade, transtornos do humor, transtornos de personalidade e condições relacionadas ao estresse crônico.</p>
+    <p>Além disso, atua com Medicina Endocanabinóide, área em crescente evidência científica, oferecendo alternativas terapêuticas seguras e embasadas, sempre com responsabilidade médica e individualização do cuidado.</p>
+    <p>Também realiza psicoterapia de orientação psicanalítica, proporcionando ao paciente um espaço profundo de escuta, reflexão e elaboração de conflitos internos.</p>
+  </div>
+</section>
 
-        <div class="hero-copy">
-          <h1 class="hero-title">
-            <!-- Nome em destaque elegante -->
-            Tatiana Scabello <span class="accent">Constantino</span>
-          </h1>
+<section id="servicos" class="section">
+  <div class="container">
+    <h2>Serviços</h2>
+    <p>Os serviços oferecidos incluem avaliação psiquiátrica completa, acompanhamento longitudinal, manejo farmacológico moderno e psicoterapia integrada, sempre respeitando a singularidade de cada paciente.</p>
+    <p>O atendimento é pautado por ética, confidencialidade e excelência técnica, com foco na melhora da qualidade de vida, funcionalidade e bem-estar emocional.</p>
+    <p>Todo o processo terapêutico é construído em parceria com o paciente, promovendo autonomia, compreensão e evolução contínua.</p>
+  </div>
+</section>
 
-          <p class="hero-subtitle">
-            Médica psiquiatra — FMRP-USP · Residência em Psiquiatria no IAMSPE.
-          </p>
+<section id="blog" class="section alt-bg">
+  <div class="container">
+    <h2>Blog</h2>
+    <div class="blog-grid">
+      <!-- CARD POST 1 -->
+      <div class="blog-card">
+        <h3>Ansiedade moderna: quando o corpo fala</h3>
+        <p>Entenda como o ritmo contemporâneo impacta sua saúde mental.</p>
+        <a href="#post1" class="btn">Ler mais</a>
+      </div>
 
-          <!-- Texto dinâmico: efeito digitado/fade-in será implementado em js/script.js -->
-          <div class="typed-wrap" aria-hidden="false">
-            <span id="typed-text" class="typed-text" data-strings='[
-              "Psiquiatria clínica e consultiva",
-              "Medicina Endocanabinóide aplicada",
-              "Psicoterapia de orientação psicanalítica"
-            ]'></span>
-            <span class="typed-cursor">|</span>
-          </div>
+      <!-- CARD POST 2 -->
+      <div class="blog-card">
+        <h3>Depressão além da tristeza</h3>
+        <p>Os sinais silenciosos que você não pode ignorar.</p>
+        <a href="#post2" class="btn">Ler mais</a>
+      </div>
 
-          <div class="hero-cta">
-            <!-- EDITAR: substituir número do WhatsApp no data-whatsapp OU no script.js -->
-            <a class="btn btn-primary" id="btn-agendar" data-whatsapp="+5511999999999" href="#" title="Agendar via WhatsApp">Agendar Consulta</a>
-            <a class="btn btn-ghost" href="#sobre">Sobre a Doutora</a>
-          </div>
-        </div>
+      <!-- CARD POST 3 -->
+      <div class="blog-card">
+        <h3>Sistema endocanabinóide e psiquiatria</h3>
+        <p>O que a ciência já comprova sobre o tema.</p>
+        <a href="#post3" class="btn">Ler mais</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SOBRE MIM -->
-  <section id="sobre" class="section about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-text">
-          <h2>Sobre mim</h2>
-          <p>
-            <!-- LONG TEXT DUMMY para facilitar edição posterior -->
-            <!-- EDITAR: substitua todo o parágrafo abaixo pelo seu texto definitivo -->
-            Sou Tatiana Scabello Constantino, médica psiquiatra formada pela Faculdade de Medicina de Ribeirão Preto da USP (FMRP-USP), com residência médica em Psiquiatria no Hospital do Servidor Estadual (IAMSPE). Atuo na cidade de São Paulo, com consultório localizado no bairro de Pinheiros, atendendo pacientes em contextos presenciais e online. Minha prática clínica integra técnicas farmacológicas baseadas em evidência, abordagens psicoterápicas de orientação psicanalítica e avanços da medicina endocanabinóide quando apropriado.
-          </p>
+<!-- POSTS INDIVIDUAIS -->
+<section id="post1" class="post-page">
+  <div class="container">
+    <h2>Ansiedade moderna: quando o corpo fala</h2>
+    <p>A ansiedade é um fenômeno crescente nas sociedades modernas, frequentemente associada a demandas excessivas, hiperconectividade e ausência de pausas restauradoras...</p>
+    <p>Texto dummy longo: O organismo responde ao estresse crônico por meio de alterações neurobiológicas que impactam sono, humor, atenção e relações interpessoais...</p>
+    <p>Texto dummy longo: Reconhecer sinais precoces e buscar ajuda especializada é fundamental para prevenir agravamentos.</p>
+  </div>
+</section>
 
-          <p>
-            <!-- Texto adicional de exemplo (conteúdo longo para substituição posterior) -->
-            Tenho experiência no manejo de transtornos do humor, ansiedade, transtornos do sono, transtornos alimentares, e em avaliações clínicas complexas que demandam articulação interdisciplinar. Minha abordagem prioriza a escuta qualificada, individualização do tratamento e acompanhamento longitudinal.
-          </p>
+<section id="post2" class="post-page">
+  <div class="container">
+    <h2>Depressão além da tristeza</h2>
+    <p>A depressão vai muito além de sentir-se triste, sendo caracterizada por alterações profundas no funcionamento emocional e cognitivo...</p>
+    <p>Texto dummy longo: Pacientes frequentemente relatam perda de sentido, anedonia e fadiga persistente, que comprometem a vida pessoal e profissional...</p>
+    <p>Texto dummy longo: O tratamento adequado é essencial para recuperação plena.</p>
+  </div>
+</section>
 
-          <!-- Logos institucionais (adicione os arquivos em /images/ se desejar) -->
-          <div class="institutions">
-            <figure>
-              <img src="images/usp-logo.png" alt="Logo USP" class="institution-logo"> <!-- opcional: adicionar images/usp-logo.png -->
-              <figcaption>Faculdade de Medicina de Ribeirão Preto — USP</figcaption>
-            </figure>
-            <figure>
-              <img src="images/iamspe-logo.png" alt="Logo IAMSPE" class="institution-logo"> <!-- opcional: adicionar images/iamspe-logo.png -->
-              <figcaption>Hospital do Servidor Estadual (IAMSPE)</figcaption>
-            </figure>
-          </div>
-        </div>
+<section id="post3" class="post-page">
+  <div class="container">
+    <h2>Sistema endocanabinóide e psiquiatria</h2>
+    <p>O sistema endocanabinóide desempenha papel crucial na regulação do humor, sono e resposta ao estresse...</p>
+    <p>Texto dummy longo: A medicina canabinoide vem ganhando espaço, com evidências crescentes sobre sua eficácia em quadros específicos...</p>
+    <p>Texto dummy longo: Sempre com prescrição médica e acompanhamento especializado.</p>
+  </div>
+</section>
 
-        <aside class="about-aside">
-          <!-- Blocos com efeito parallax/scroll reveal (estilizados em css) -->
-          <div class="card about-card">
-            <h3>Formação</h3>
-            <p>Graduação: FMRP-USP · Residência: IAMSPE · Cursos e atualizações em Psiquiatria Clínica e Medicina Endocanabinóide.</p>
-          </div>
+<section id="contato" class="section">
+  <div class="container">
+    <h2>Contato</h2>
+    <div class="grid-2">
+      <form id="whatsapp-form">
+        <!-- Edite placeholders conforme desejar -->
+        <input type="text" id="nome" placeholder="Seu nome">
+        <button type="submit" class="btn">Agendar pelo WhatsApp</button>
+      </form>
 
-          <div class="card about-card">
-            <h3>Abordagem</h3>
-            <p>Integração entre intervenção medicamentosa baseada em evidência, psicoterapia psicanalítica e avaliação personalizada do uso terapêutico de canabinóides quando aconselhável.</p>
-          </div>
-
-          <div class="card about-card">
-            <h3>Atendimento</h3>
-            <p>Consultório em Pinheiros (SP) — sessões presenciais e atendimento online seguro.</p>
-          </div>
-        </aside>
-      </div>
+      <iframe
+        src="https://www.google.com/maps?q=Rua%20Monte%20Alegre,%20428%20-%20Pinheiros%20-%20S%C3%A3o%20Paulo%20-%20SP&output=embed"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ÁREAS DE ATUAÇÃO (cards interativos) -->
-  <section id="areas" class="section areas">
-    <div class="container">
-      <h2>Áreas de atuação</h2>
-      <p class="lead">Atuação clínica especializada em:</p>
+</main>
 
-      <div class="areas-grid">
-        <!-- Cada card terá hover/zoom/sombra via CSS; ícones animados podem ser adicionados -->
-        <article class="area-card" data-area="psiquiatria">
-          <div class="area-media">
-            <i class="fa-solid fa-brain icon-area"></i>
-          </div>
-          <h3>Psiquiatria Clínica</h3>
-          <p>Diagnóstico e tratamento de transtornos do humor, ansiedade, transtornos psicóticos, transtornos do sono e acompanhamento farmacoterápico especializado.</p>
-          <p class="long-text">Texto dummy extenso: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod, nisl a efficitur porttitor, arcu neque posuere odio, in sodales urna urna non dui. Integer vitae sem vitae arcu pellentesque faucibus.</p>
-        </article>
+<footer>
+  <p>© 2026 Tatiana Scabello Constantino – Psiquiatria em São Paulo</p>
+</footer>
 
-        <article class="area-card" data-area="endocanabinoide">
-          <div class="area-media">
-            <i class="fa-solid fa-leaf icon-area"></i>
-          </div>
-          <h3>Medicina Endocanabinóide</h3>
-          <p>Avaliação criteriosa e individualizada do papel dos canabinóides na prática clínica, com ênfase em segurança, interação medicamentosa e evidência científica.</p>
-          <p class="long-text">Texto dummy extenso: Proin eget lorem vel tortor volutpat elementum. Etiam in nunc sed nisl pulvinar posuere. Cras faucibus, arcu non facilisis pretium, urna magna ultricies augue, in luctus tortor lectus nec magna.</p>
-        </article>
-
-        <article class="area-card" data-area="psicanalitica">
-          <div class="area-media">
-            <i class="fa-solid fa-comments icon-area"></i>
-          </div>
-          <h3>Psicoterapia Psicanalítica</h3>
-          <p>Processos terapêuticos de orientação psicanalítica para tratamento de conflitos intrapsíquicos, sofrimento subjetivo e promoção de insight.</p>
-          <p class="long-text">Texto dummy extenso: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVIÇOS -->
-  <section id="servicos" class="section services section--alt">
-    <div class="container">
-      <h2>Serviços</h2>
-      <p class="lead">Atendimentos e modalidades</p>
-
-      <div class="services-grid">
-        <div class="service-block">
-          <h3>Atendimento Presencial</h3>
-          <p>Consultório localizado em Pinheiros — ambiente discreto, seguro e confortável, com horários flexíveis para pacientes locais.</p>
-          <ul>
-            <li>Consultas iniciais (avaliação detalhada)</li>
-            <li>Retorno e seguimento</li>
-            <li>Avaliação para tratamentos específicos</li>
-          </ul>
-        </div>
-
-        <div class="service-block">
-          <h3>Atendimento Online</h3>
-          <p>Plataforma segura para atendimentos remotos, recomendada para pacientes que residem em outras cidades ou viajam frequentemente.</p>
-          <ul>
-            <li>Plataforma protegida e confidencial</li>
-            <li>Agendamento simples via WhatsApp</li>
-          </ul>
-        </div>
-
-        <div class="service-pricing">
-          <h3>Forma de apresentação</h3>
-          <!-- Tabela estilizada ou blocos visuais serão implementados em css -->
-          <div class="pricing-cards">
-            <div class="pricing-card">
-              <h4>Consulta Inicial</h4>
-              <p>Descrição detalhada, duração e objetivos da consulta inicial. (texto dummy longo para personalizar depois)</p>
-            </div>
-            <div class="pricing-card">
-              <h4>Sessões de Acompanhamento</h4>
-              <p>Sessões regulares com plano terapêutico individualizado. (texto dummy longo)</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTATO -->
-  <section id="contato" class="section contact">
-    <div class="container">
-      <h2>Contato</h2>
-      <div class="contact-grid">
-        <div class="contact-form">
-          <form id="form-contato" action="#" novalidate>
-            <label for="nome">Nome</label>
-            <input id="nome" name="nome" type="text" placeholder="Seu nome completo" />
-
-            <label for="email">E-mail</label>
-            <input id="email" name="email" type="email" placeholder="seu@exemplo.com" />
-
-            <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem..."></textarea>
-
-            <div class="form-actions">
-              <!-- Botão que envia mensagem via WhatsApp com texto condicionado pelo campo Nome.
-                   O atributo data-whatsapp pode conter o número no formato internacional (+55...)
-                   Caso prefira, altere o número aqui ou no js/script.js -->
-              <button type="button" id="btn-whatsapp" class="btn btn-primary" data-whatsapp="+5511999999999">
-                <i class="fa fa-whatsapp"></i> Enviar via WhatsApp
-              </button>
-
-              <button type="submit" class="btn btn-ghost">Enviar por E-mail (opcional)</button>
-            </div>
-
-            <p class="form-note">Ao clicar em "Enviar via WhatsApp", uma mensagem será construída automaticamente. Se o campo "Nome" estiver vazio, a mensagem será genérica conforme exigido.</p>
-          </form>
-        </div>
-
-        <div class="contact-info">
-          <div class="contact-card">
-            <h3>Localização</h3>
-            <p>Pinheiros — São Paulo, SP (endereço completo pode ser adicionado aqui)</p>
-            <!-- MAPA INTERATIVO: Google Maps embed centralizado em Pinheiros, São Paulo-SP -->
-            <!-- EDITAR: se quiser coordenadas exatas, substitua o src do iframe -->
-            <div class="map-wrapper">
-              <iframe
-                title="Mapa - Pinheiros, São Paulo"
-                src="https://www.google.com/maps?q=Pinheiros,+São+Paulo+SP&output=embed"
-                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-          </div>
-
-          <div class="contact-card">
-            <h3>Atendimento</h3>
-            <p>Presencial e Online · Horários sob agendamento.</p>
-            <p><strong>Telefone / WhatsApp:</strong> <span id="whatsapp-display">+55 (11) 99999-9999</span></p> <!-- EDITAR: número -->
-            <p><strong>E-mail:</strong> contato@seudominio.com</p> <!-- EDITAR -->
-          </div>
-
-          <div class="contact-card">
-            <h3>Observações</h3>
-            <p>Informações sobre convênios, política de cancelamento, e orientações pré-consulta podem ser inseridas aqui.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- RODAPÉ -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <p>&copy; <span id="current-year"></span> Dra. Tatiana Scabello Constantino — Todos os direitos reservados.</p>
-      </div>
-      <div class="footer-right">
-        <nav class="footer-nav">
-          <a href="#home">Início</a>
-          <a href="#sobre">Sobre</a>
-          <a href="#contato">Contato</a>
-        </nav>
-      </div>
-    </div>
-  </footer>
-
-  <!-- SCRIPTS -->
-  <!-- O arquivo js/script.js será enviado em seguida -->
-  <script src="js/script.js" defer></script>
+<script src="js/script.js"></script>
 </body>
 </html>
