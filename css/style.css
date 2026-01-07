@@ -219,10 +219,9 @@ img {
 .footer {
   background: rgba(255,255,255,0.4);
   padding: 60px 0;
-  color: var(--accent-soft);
 }
 .container footer-grid{
-  color: var(--accent-soft);
+  color: var(--accent);
 }
 
 /* ================================
