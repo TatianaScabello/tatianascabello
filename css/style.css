@@ -1,150 +1,165 @@
-/* =====================================================
-   PALETA E VARIÁVEIS — Edite aqui se quiser alterar cores
-===================================================== */
+/* 
+====================================================
+ARQUIVO: style.css
+Aqui você controla cores, fontes, espaçamentos e
+estilos visuais de todo o site.
+====================================================
+*/
+
+/* VARIÁVEIS DE CORES — basta alterar aqui */
 :root {
-  --gold: #FAC26A;
-  --blue: #1C3A4D;
-  --green: #2A9D8F;
-  --light-gray: #F5F5F5;
-  --white: #FFFFFF;
-  --black: #222222;
-  --shadow: 0 12px 30px rgba(0,0,0,0.12);
+  --bg-main: #C3DAC3;
+  --text-main: #495867;
+  --text-secondary: #577399;
+  --accent: #FF8360;
+  --accent-soft: #AD7A99;
+  --white: #ffffff;
 }
 
-/* RESET */
+/* RESET BÁSICO */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-/* FUNDO COM TEXTURA SUTIL */
 body {
-  background:
-    radial-gradient(circle at top, rgba(250,194,106,0.15), transparent 40%),
-    linear-gradient(135deg, #1C3A4D 0%, #102734 100%);
-  color: var(--black);
+  background: linear-gradient(135deg, var(--bg-main), #e7f0e7);
+  color: var(--text-main);
+  line-height: 1.7;
 }
 
-/* CONTAINERS */
+/* TEXTURA SUTIL DE FUNDO */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("../images/consultorio.jpg");
+  opacity: 0.04;
+  z-index: -1;
+}
+
+/* CONTAINER PADRÃO */
 .container {
+  width: 90%;
   max-width: 1200px;
   margin: auto;
-  padding: 80px 20px;
 }
 
 /* HEADER */
-#main-header {
+header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(28,58,77,0.9);
-  backdrop-filter: blur(10px);
+  background: rgba(195, 218, 195, 0.92);
+  backdrop-filter: blur(8px);
   z-index: 1000;
-  transition: all 0.4s ease;
+  transition: box-shadow 0.3s ease, padding 0.3s ease;
 }
 
 .header-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  justify-content: space-between;
+  padding: 18px 0;
 }
 
 .logo {
-  color: var(--gold);
   font-weight: 600;
-  letter-spacing: 1px;
+  color: var(--text-main);
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  gap: 25px;
+  gap: 28px;
 }
 
 nav a {
-  color: var(--white);
   text-decoration: none;
-  position: relative;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
 }
 
-nav a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: -5px;
-  left: 0;
-  background: var(--gold);
-  transition: 0.3s;
+nav a:hover {
+  color: var(--accent);
 }
 
-nav a:hover::after {
-  width: 100%;
+.btn-agendar-header {
+  padding: 10px 20px;
+  background: var(--accent);
+  color: var(--white);
+  border-radius: 25px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.btn-agendar-header:hover {
+  transform: translateY(-3px);
+}
+
+#menu-mobile {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 /* HERO */
 .hero {
-  height: 100vh;
-  background: url("../images/consultorio.jpg") center/cover no-repeat;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.hero .overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(28,58,77,0.85), rgba(16,39,52,0.9));
-}
-
-.hero-content {
-  position: relative;
-  color: var(--white);
-  animation: fadeUp 1.2s ease forwards;
+  padding-top: 140px;
+  padding-bottom: 120px;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  color: var(--gold);
-  margin-bottom: 15px;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 650px;
+  margin-bottom: 30px;
+  color: var(--text-secondary);
+}
+
+/* BOTÕES */
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+  color: var(--white);
+  padding: 14px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.btn-secondary {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
 }
 
 /* SEÇÕES */
 .section {
-  background: var(--white);
+  padding: 100px 0;
 }
 
 .alt-bg {
-  background: var(--light-gray);
-}
-
-.section h2 {
-  color: var(--blue);
-  margin-bottom: 30px;
-}
-
-/* GRID */
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-  gap: 40px;
-  align-items: center;
-}
-
-/* IMAGENS */
-img {
-  width: 100%;
-  border-radius: 18px;
-  box-shadow: var(--shadow);
+  background: rgba(255,255,255,0.4);
+  border-radius: 40px;
+  margin: 60px auto;
+  width: 95%;
 }
 
 /* BLOG */
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
@@ -152,61 +167,82 @@ img {
   background: var(--white);
   padding: 30px;
   border-radius: 20px;
-  box-shadow: var(--shadow);
-  transition: transform 0.4s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
 }
 
 .blog-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
 }
 
-/* BOTÕES */
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 25px;
-  background: linear-gradient(135deg, var(--gold), var(--green));
-  color: var(--black);
-  border-radius: 25px;
-  text-decoration: none;
-  transition: all 0.3s ease;
+/* CONTATO */
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
 }
 
-.btn:hover {
-  filter: brightness(1.1);
-  transform: scale(1.05);
-}
-
-/* POSTS */
-.post-page {
-  display: none;
-  background: var(--white);
-}
-
-/* FORM */
-form input {
+.contato-form input {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  padding: 14px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border: none;
+}
+
+/* MAPA */
+iframe {
+  width: 100%;
+  height: 250px;
+  border-radius: 20px;
+  border: none;
 }
 
 /* FOOTER */
 footer {
-  background: var(--blue);
-  color: var(--white);
   text-align: center;
-  padding: 20px;
+  padding: 40px 0;
+  color: var(--text-secondary);
 }
 
-/* ANIMAÇÕES */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+/* BOTÃO FLUTUANTE MOBILE */
+.btn-float-mobile {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--accent);
+  color: var(--white);
+  padding: 14px 20px;
+  border-radius: 40px;
+  text-decoration: none;
+  z-index: 1000;
 }
 
 /* RESPONSIVO */
-@media(max-width:768px){
-  .hero h1 { font-size: 2.2rem; }
+@media (max-width: 768px) {
+
+  nav ul {
+    display: none;
+  }
+
+  #menu-mobile {
+    display: block;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contato-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-agendar-header {
+    display: none;
+  }
+
+  .btn-float-mobile {
+    display: block;
+  }
 }
