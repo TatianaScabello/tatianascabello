@@ -98,3 +98,70 @@ nav a:hover { color:var(--accent); }
   .artigo-container { padding:30px; }
   .artigo-imagens { grid-template-columns:1fr; }
 }
+/* =========================
+   HOME REFINADA – ESTILO EDITORIAL
+   ========================= */
+
+.hero-text h1 {
+  font-size: 3rem;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  max-width: 540px;
+  margin-bottom: 18px;
+  color: var(--text-secondary);
+}
+
+/* SOBRE – LAYOUT MAIS NOBRE */
+.sobre-content {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.sobre-image .img-placeholder {
+  height: 360px;
+  border-radius: 26px;
+  background: rgba(255,255,255,.55);
+}
+
+/* ÁREAS – CARDS MAIS ELEGANTES */
+.cards .card {
+  padding: 36px;
+}
+
+.cards .card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+/* BLOG – CARDS TIPO REVISTA */
+.blog-card h3 {
+  font-size: 1.4rem;
+}
+
+.blog-card p {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+}
+
+/* CONTATO – FORM PREMIUM */
+#form-contato {
+  margin: 40px 0;
+}
+
+#form-contato input {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+}
+
+/* MOBILE HOME */
+@media(max-width:800px){
+  .hero-text h1 { font-size: 2.2rem; }
+  .hero-text p { max-width: 100%; }
+  .sobre-content { grid-template-columns: 1fr; }
+}
