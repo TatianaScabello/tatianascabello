@@ -1,12 +1,6 @@
-/* 
-====================================================
-ARQUIVO: style.css
-Aqui você controla cores, fontes, espaçamentos e
-estilos visuais de todo o site.
-====================================================
-*/
-
-/* VARIÁVEIS DE CORES — basta alterar aqui */
+/* =========================
+   VARIÁVEIS DE CORES
+   ========================= */
 :root {
   --bg-main: #C3DAC3;
   --text-main: #495867;
@@ -16,49 +10,59 @@ estilos visuais de todo o site.
   --white: #ffffff;
 }
 
-/* RESET BÁSICO */
+/* =========================
+   RESET + BASE
+   ========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-  background: linear-gradient(135deg, var(--bg-main), #e7f0e7);
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(180deg, #C3DAC3 0%, #dbe9db 100%);
   color: var(--text-main);
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
-/* TEXTURA SUTIL DE FUNDO */
+/* TEXTURA SUAVE DE FUNDO */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: url("../images/consultorio.jpg");
+  background-image: url('../images/noise.png'); /* você pode substituir */
   opacity: 0.04;
-  z-index: -1;
+  pointer-events: none;
 }
 
-/* CONTAINER PADRÃO */
+/* =========================
+   CONTAINER
+   ========================= */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+   ========================= */
 header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(195, 218, 195, 0.92);
-  backdrop-filter: blur(8px);
+  background: rgba(195,218,195,0.85);
+  backdrop-filter: blur(10px);
   z-index: 1000;
-  transition: box-shadow 0.3s ease, padding 0.3s ease;
+  transition: all .3s ease;
 }
 
-.header-container {
+header.scrolled {
+  box-shadow: 0 4px 20px rgba(0,0,0,.08);
+}
+
+header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -66,183 +70,185 @@ header {
 }
 
 .logo {
-  font-weight: 600;
-  color: var(--text-main);
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 28px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
 }
 
 nav a {
+  margin: 0 12px;
   text-decoration: none;
-  color: var(--text-secondary);
-  transition: color 0.3s ease;
+  color: var(--text-main);
+  font-weight: 500;
+  transition: color .3s;
 }
 
 nav a:hover {
   color: var(--accent);
 }
 
-.btn-agendar-header {
-  padding: 10px 20px;
-  background: var(--accent);
-  color: var(--white);
-  border-radius: 25px;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-}
-
-.btn-agendar-header:hover {
-  transform: translateY(-3px);
-}
-
-#menu-mobile {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-/* HERO */
-.hero {
-  padding-top: 140px;
-  padding-bottom: 120px;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  max-width: 650px;
-  margin-bottom: 30px;
-  color: var(--text-secondary);
-}
-
-/* BOTÕES */
+/* =========================
+   BOTÕES
+   ========================= */
+.btn-agendar,
 .btn-primary {
   background: linear-gradient(135deg, var(--accent), var(--accent-soft));
-  color: var(--white);
-  padding: 14px 30px;
+  padding: 10px 22px;
   border-radius: 30px;
+  color: white;
   text-decoration: none;
-  display: inline-block;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform .3s, box-shadow .3s;
 }
 
+.btn-agendar:hover,
 .btn-primary:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
-}
-
-.btn-secondary {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-/* SEÇÕES */
-.section {
-  padding: 100px 0;
-}
-
-.alt-bg {
-  background: rgba(255,255,255,0.4);
-  border-radius: 40px;
-  margin: 60px auto;
-  width: 95%;
-}
-
-/* BLOG */
-.blog-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.blog-card {
-  background: var(--white);
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
-}
-
-.blog-card:hover {
-  transform: translateY(-6px);
-}
-
-/* CONTATO */
-.contato-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-}
-
-.contato-form input {
-  width: 100%;
-  padding: 14px;
-  margin-bottom: 20px;
-  border-radius: 12px;
-  border: none;
-}
-
-/* MAPA */
-iframe {
-  width: 100%;
-  height: 250px;
-  border-radius: 20px;
-  border: none;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 40px 0;
-  color: var(--text-secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,.15);
 }
 
 /* BOTÃO FLUTUANTE MOBILE */
-.btn-float-mobile {
-  display: none;
+.btn-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background: var(--accent);
-  color: var(--white);
+  color: #fff;
   padding: 14px 20px;
-  border-radius: 40px;
+  border-radius: 50px;
   text-decoration: none;
-  z-index: 1000;
+  display: none;
+  z-index: 999;
 }
 
-/* RESPONSIVO */
-@media (max-width: 768px) {
+/* =========================
+   HERO
+   ========================= */
+.hero {
+  padding: 140px 0 80px;
+}
 
-  nav ul {
+.hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+}
+
+.hero-image .img-placeholder {
+  height: 350px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+
+/* =========================
+   SEÇÕES
+   ========================= */
+section {
+  padding: 80px 0;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 40px;
+}
+
+/* =========================
+   CARDS
+   ========================= */
+.cards, .blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 24px;
+}
+
+.card, .blog-card {
+  background: rgba(255,255,255,.7);
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  transition: transform .3s;
+}
+
+.card:hover, .blog-card:hover {
+  transform: translateY(-6px);
+}
+
+/* =========================
+   CONTATO
+   ========================= */
+#contato input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  width: 260px;
+  margin-right: 10px;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+  margin-top: 30px;
+  border: none;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: .9rem;
+  color: var(--text-secondary);
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+#menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+@media(max-width: 900px) {
+  nav {
     display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #C3DAC3;
+    padding: 20px;
+    border-radius: 0 0 0 20px;
   }
 
-  #menu-mobile {
+  nav.active {
     display: block;
   }
 
+  .hero .container,
+  .cards,
   .blog-grid {
     grid-template-columns: 1fr;
   }
 
-  .contato-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .btn-agendar-header {
-    display: none;
-  }
-
-  .btn-float-mobile {
+  #menu-toggle {
     display: block;
+  }
+
+  .btn-float {
+    display: block;
+  }
+
+  .btn-agendar {
+    display: none;
   }
 }
