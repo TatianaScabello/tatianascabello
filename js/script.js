@@ -1,62 +1,56 @@
-/* 
-====================================================
-ARQUIVO: script.js
-Aqui ficam as interações do site:
-- Menu mobile
-- Header com efeito ao rolar
-- Botão WhatsApp dinâmico
-====================================================
-*/
+/* =========================
+   HEADER SCROLL EFFECT
+   ========================= */
+const header = document.getElementById('header');
 
-/* MENU MOBILE */
-const menuMobile = document.getElementById("menu-mobile");
-const nav = document.getElementById("nav");
-
-menuMobile.addEventListener("click", () => {
-  nav.classList.toggle("open");
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 40);
 });
 
-/* HEADER COM SOMBRA AO ROLAR */
-const header = document.getElementById("header");
+/* =========================
+   MENU MOBILE
+   ========================= */
+const toggle = document.getElementById('menu-toggle');
+const nav = document.getElementById('nav');
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    header.style.boxShadow = "0 4px 15px rgba(0,0,0,0.15)";
-  } else {
-    header.style.boxShadow = "none";
-  }
+toggle.addEventListener('click', () => {
+  nav.classList.toggle('active');
 });
 
-/* BOTÃO WHATSAPP COM LÓGICA DE MENSAGEM */
-const btnWhatsapp = document.getElementById("btn-whatsapp");
-const campoNome = document.getElementById("nome");
+/* =========================
+   WHATSAPP FORM
+   ========================= */
+const form = document.getElementById('form-contato');
+const nomeInput = document.getElementById('nome');
 
-btnWhatsapp.addEventListener("click", () => {
-  const nome = campoNome.value.trim();
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
 
-  let mensagem = "Olá, gostaria de marcar uma consulta.";
+  let nome = nomeInput.value.trim();
+  let mensagem = '';
 
-  if (nome !== "") {
+  if (nome.length > 0) {
     mensagem = `Olá, meu nome é ${nome}. Gostaria de marcar uma consulta.`;
+  } else {
+    mensagem = 'Olá, gostaria de marcar uma consulta.';
   }
 
-  // IMPORTANTE:
-  // Altere o número se precisar (formato: 5511994504082)
-  const numero = "5511994504082";
-  const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
-
-  window.open(url, "_blank");
+  const url = `https://wa.me/5511994504082?text=${encodeURIComponent(mensagem)}`;
+  window.open(url, '_blank');
 });
 
-/* ANIMAÇÃO SUAVE AO ENTRAR NA TELA */
+/* =========================
+   ANIMAÇÕES DE SCROLL
+   ========================= */
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.15 });
 
-document.querySelectorAll(".section, .blog-card").forEach(el => {
+document.querySelectorAll('section, .card, .blog-card').forEach(el => {
+  el.classList.add('hidden');
   observer.observe(el);
 });
