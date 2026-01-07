@@ -221,6 +221,9 @@ img {
   padding: 60px 0;
   color: var(--accent-soft);
 }
+.container footer-grid{
+  color: var(--accent-soft);
+}
 
 /* ================================
    BOTÃO FLUTUANTE MOBILE
