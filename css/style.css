@@ -131,12 +131,17 @@ img {
 .hero-text h2 {
   font-size: 2.4rem;
   margin-bottom: 20px;
-  line-height: 1.8;
+  line-height: 1.2;
 }
 
 .hero-text p {
   margin-bottom: 16px;
   color: var(--text-secondary);
+}
+
+.hero-image {
+  width: 470px; 
+  height: auto; 
 }
 
 .btn-primary {
