@@ -130,12 +130,12 @@ img {
 
 .hero-text h2 {
   font-size: 2.4rem;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
   line-height: 1.0;
 }
 
 .hero-text p {
-  margin-top: 66px;
+  margin-top: 16px;
   margin-bottom: 16px;
   color: var(--text-secondary);
 }
