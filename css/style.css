@@ -140,8 +140,9 @@ img {
 }
 
 .hero-image {
-  width: 470px; 
+  width: 420px; 
   height: auto; 
+  float: right;
 }
 
 .btn-primary {
