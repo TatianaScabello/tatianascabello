@@ -154,7 +154,17 @@ img {
    HERO
 ================================ */
 .hero {
-  padding-top: 140px;
+  padding-top: 170px;
+  padding-bottom: 60px;
+}
+
+.hero-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 20px;
 }
 
 .hero-grid {
@@ -164,10 +174,17 @@ img {
   align-items: center;
 }
 
-.hero-text h2 {
-  font-size: 2.4rem;
-  margin-bottom: 10px;
-  line-height: 1.0;
+.hero-title {
+  font-size: 2.6rem;
+  line-height: 1.15;
+  max-width: 540px;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  max-width: 480px;
+  color: var(--text-secondary);
+  margin-bottom: 26px;
 }
 
 .hero-text p {
@@ -177,15 +194,14 @@ img {
 }
 
 .hero-image {
-  width: 420px; 
-  height: auto; 
-  justify-self: end;
+  width: 360px;
+  justify-self: center;
 }
 
 .btn-primary {
   display: inline-block;
   margin-top: 20px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+  background: linear-gradient(135deg, #F67B60, var(--accent-soft));
   color: #fff;
   padding: 14px 32px;
   border-radius: 40px;
