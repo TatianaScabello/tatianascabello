@@ -160,33 +160,34 @@ img {
 
 .hero-eyebrow {
   font-size: 0.68rem;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--text-secondary);
-  display: block;
+  display: inline-block;
   margin-bottom: 20px;
+  line-height: 1.8;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 20px;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 40px;
   align-items: center;
 }
 .hero-text {
   max-width: 520px;
-  justify-self: center;
-  margin-left: 0;
+  margin: 0 auto;
+  text-align: left;
 }
 .hero-title {
   font-size: 2.6rem;
   line-height: 1.18;
-  max-width: 460px;
+  max-width: none;
   margin-bottom: 22px;
 }
 
 .hero-description {
-  max-width: 420px;
+  max-width: none;
   color: var(--text-secondary);
   margin-bottom: 26px;
 }
