@@ -164,7 +164,7 @@ img {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.5fr 0.5fr;
+  grid-template-columns: 1.4fr 0.6fr;
   gap: 20px;
   align-items: center;
 }
@@ -183,19 +183,19 @@ img {
    display: inline-block;
    font-family: var(--font-sans);
    color: var(--glaucous);
-   margin-bottom: 18px;
+   margin-bottom: 34px;
    line-height: 1.8;
    text-align: center;
 }
 
 .hero-title {
    font-family: var(--font-serif);
-   font-size: 2.6rem;
+   font-size: 2.4rem;
    line-height: 1.18;
    color: var(--blue-slate);
    text-transform: uppercase;
    max-width: none;
-   margin-bottom: 22px;
+   margin-bottom: 18px;
 }
 
 .hero-description {
@@ -213,7 +213,7 @@ img {
 }
 
 .hero-image {
-  width: 260px;
+  width: 300px;
   border-radius: 28px;
   display: block;
 }
