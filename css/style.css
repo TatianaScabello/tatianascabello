@@ -326,12 +326,7 @@ img {
 /* CARD */
 
 .atuacao-card {
-   background: linear-gradient(
-      145deg,
-      #b58787 0%,
-      #e98690 60%,
-      #bd93a2 100%
-   );
+   background: linear-gradient(135deg, #BD9A9A, var(--accent-soft));
    border-radius: 28px;
    padding: 32px;
    box-shadow: 
@@ -356,15 +351,17 @@ img {
   line-height: 1.3;
   min-height: 64px; /* padroniza altura dos títulos */
   margin-bottom: 14px;
+   text-align: center;
 }
 
 /* TEXTO DO CARD */
 
 .atuacao-card p {
-  font-size: 0.98rem;
-  line-height: 1.5;
-  max-width: 260px;
+  font-size: 1rem;
+  line-height: 1.3;
+  max-width: none;
   margin: 0 auto;
+   text-align: center;
 }
 
 /* FOOTER */
