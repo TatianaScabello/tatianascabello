@@ -26,6 +26,7 @@ body {
   line-height: 1.8;
 }
 
+
 /* ================================
    LAYOUT GLOBAL
 ================================ */
@@ -239,16 +240,47 @@ img {
 /* ================================
    SOBRE
 ================================ */
+
+#sobre {
+  background: #DDECDD;
+   padding-top: 40px;
+}
+
 .sobre-grid {
-  display: grid;
-  grid-template-columns: 0.5fr 1.5fr;
-  gap: 60px;
+   display: grid;
+   grid-template-columns: 0.9fr 1.1fr;
+   gap: 80px;
+   align-items: center;
 }
 
 .sobre-image{
-  width: 420px; 
+  width: 460px; 
   height: auto;    
-  justify-self: start;
+  justify-self: end;
+}
+
+.sobre-image img {
+  border-radius: 28px;
+}
+
+.sobre-text {
+   max-width: 560px;
+   justify-self: start;
+   text-align: right;
+   margin-top: 20px;
+}
+.sobre-text h2 {
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-decoration: underline;
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+}
+.sobre-text p {
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  line-height: 1.9;
 }
 
 /* ================================
