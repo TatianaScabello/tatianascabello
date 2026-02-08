@@ -15,6 +15,10 @@
    --bg-light: #DCEBDD;
    --bg-mid: #C3DAC3;
    --bg-soft-contrast: #B9D1B9;
+   --font-serif: 'DM Serif Display', serif;
+   --font-sans: 'Inter', sans-serif;   
+   --glaucous: #577399;
+   --blue-slate: #495867;
 }
 
 * {
@@ -24,7 +28,7 @@
 }
 
 body {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'DM Serif Display', sans-serif;
   background-color: var(--bg-light);
   color: var(--text-main);
   line-height: 1.8;
@@ -455,7 +459,7 @@ img {
   padding: 60px 0;
   color: var(--accent);
 }
-.container footer-grid{
+.container .footer-grid{
   color: var(--accent);
 }
 
