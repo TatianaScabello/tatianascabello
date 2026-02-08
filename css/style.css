@@ -330,14 +330,20 @@ img {
 /* CARD */
 
 .atuacao-card {
-   background: linear-gradient(135deg, #BD9A9A, var(--accent-soft));
+   background: #BD9A9A;
    border-radius: 28px;
    padding: 32px;
-   box-shadow: 
-      0 8px 18px rgba(0,0,0,0.06),
-      inset 0 1px 0 rgba(255,255,255,0.25);
+
+   /* Borda elegante para sensação de placa */
+   border: 1.5px solid rgba(255,255,255,0.35);
+
+   /* Volume estilo placa */
+   box-shadow:
+      0 12px 22px rgba(0,0,0,0.08),
+      0 4px 8px rgba(0,0,0,0.05),
+      inset 0 1px 0 rgba(255,255,255,0.35);
+
    transition: all 0.35s ease;
-   backdrop-filter: blur(2px);
 }
 
 .atuacao-card:hover {
