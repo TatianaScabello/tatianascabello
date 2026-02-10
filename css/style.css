@@ -390,13 +390,13 @@ img {
 .atuacao-footer {
    font-size: 1.3rem;
    text-align: left;
-   max-width: 760px;
+   max-width: none;
    margin: 0 auto;
 }
 
 .atuacao-footer p {
    font-size: 1.3rem;   
-   letter-spacing: 0.11em;
+   letter-spacing: 0.1em;
 }
 
 .atuacao-footer p:first-child {
