@@ -558,10 +558,16 @@ img {
 
 /* ZOOM EFFECT */
 
-.accordion-item:not(.active) .accordion-number,
-.accordion-item:not(.active) .accordion-titles {
+.accordion-item:not(.active) .accordion-number {
   transform: scale(0.92);
-  opacity: 0.75;
+}
+
+.accordion-item:not(.active) .accordion-titles h3 {
+  font-size: 1.55rem;
+}
+
+.accordion-item:not(.active) .accordion-titles p {
+  font-size: 0.98rem;
 }
 
 .accordion-item.active .accordion-number,
