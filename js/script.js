@@ -44,3 +44,25 @@ btnWhatsapp.addEventListener('click', () => {
   const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
   window.open(url, '_blank');
 });
+
+/* ================= ACCORDION FUNCIONA ================= */
+
+const accordionItems = document.querySelectorAll(".accordion-item");
+
+accordionItems.forEach(item => {
+
+  const header = item.querySelector(".accordion-header");
+
+  header.addEventListener("click", () => {
+
+    const isActive = item.classList.contains("active");
+
+    accordionItems.forEach(i => i.classList.remove("active"));
+
+    if (!isActive) {
+      item.classList.add("active");
+    }
+
+  });
+
+});
