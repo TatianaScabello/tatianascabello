@@ -280,10 +280,9 @@ img {
 .sobre-text h2 {
   text-align: right;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  text-decoration: underline;
-  font-size: 1.4rem;
-  margin-bottom: 30px;
+  letter-spacing: 0.14em;
+  font-size: 1.5rem;
+  margin-bottom: 36px;
 }
 .sobre-text p {
   margin-bottom: 20px;
@@ -429,7 +428,7 @@ img {
 /* ================= FUNCIONA ================= */
 
 .funciona {
-  background-color: var(--bg-light);
+  background-color: var(--bg-mid)
 }
 
 /* HEADER */
