@@ -63,6 +63,19 @@ accordionItems.forEach(item => {
       item.classList.add("active");
     }
 
+    updateAccordionState();
+
   });
 
 });
+
+function updateAccordionState() {
+
+  const hasActive = document.querySelector(".accordion-item.active");
+
+  document.querySelector(".funciona-accordion")
+    .classList.toggle("has-active", !!hasActive);
+}
+
+updateAccordionState();
+
