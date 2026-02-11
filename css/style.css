@@ -465,11 +465,11 @@ img {
   content: "";
   position: absolute;
   left: 34px;
-  top: 0;
-  bottom: 0;
+  top: 28px; 
+  bottom: 28px;
   width: 2px;
   background: var(--blue-slate);
-  opacity: 0.4;
+  opacity: 0.35;
 }
 
 /* ITEM */
@@ -558,14 +558,17 @@ img {
 
 /* ZOOM EFFECT */
 
+.funciona-accordion.has-active 
 .accordion-item:not(.active) .accordion-number {
   transform: scale(0.92);
 }
 
+.funciona-accordion.has-active 
 .accordion-item:not(.active) .accordion-titles h3 {
   font-size: 1.55rem;
 }
 
+.funciona-accordion.has-active 
 .accordion-item:not(.active) .accordion-titles p {
   font-size: 0.98rem;
 }
@@ -579,9 +582,13 @@ img {
 /* MINI FAQ */
 
 .mini-faq {
-  margin-top: 80px;
+  margin: 80px auto 0;
+
+  max-width: 900px;
+
   background: #aec8ce;
-  padding: 40px;
+  padding: 40px 50px;
+
   border-radius: 28px;
   box-shadow: var(--shadow);
 }
