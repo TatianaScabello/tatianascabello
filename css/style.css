@@ -562,6 +562,7 @@ img {
 
 .accordion-item.active .accordion-number {
   transform: scale(1.05);
+   max-height: 500px;
 }
 
 .accordion-item.active .accordion-titles h3 {
