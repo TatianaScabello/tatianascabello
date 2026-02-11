@@ -19,6 +19,7 @@
    --font-sans: 'Inter', sans-serif;   
    --glaucous: #577399;
    --blue-slate: #495867;
+   --motion-smooth: cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 * {
@@ -526,17 +527,20 @@ img {
 
 .accordion-icon {
   font-size: 2rem;
-  transition: var(--transition);
+  transition: transform 0.55s var(--motion-smooth);
 }
 
 /* CONTENT */
 
 .accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease, opacity 0.4s ease;
-  opacity: 0;
-  padding-right: 80px;
+   max-height: 0;
+   overflow: hidden;
+   transition:
+      max-height 0.65s var(--motion-smooth),
+      opacity 0.45s ease-out,
+      transform 0.65s var(--motion-smooth);
+   opacity: 0;
+   padding-right: 80px;
 }
 
 .accordion-content p {
