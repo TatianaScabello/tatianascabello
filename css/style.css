@@ -19,7 +19,7 @@
    --font-sans: 'Inter', sans-serif;   
    --glaucous: #577399;
    --blue-slate: #495867;
-   --motion-smooth: cubic-bezier(0.22, 0.61, 0.36, 1);
+   --motion-smooth: cubic-bezier(0.25, 0.85, 0.35, 1);
 }
 
 * {
@@ -464,8 +464,8 @@ img {
 .funciona-accordion::before {
   content: "";
   position: absolute;
-  left: 34px;
-  top: 28px; 
+  left: 52.5px;
+  top: 28px;
   bottom: 28px;
   width: 2px;
   background: var(--blue-slate);
@@ -523,6 +523,16 @@ img {
   color: var(--text-secondary);
 }
 
+.accordion-number,
+.accordion-titles h3,
+.accordion-titles p {
+
+  transition:
+    transform 0.55s var(--motion-smooth),
+    opacity 0.45s ease,
+    filter 0.55s var(--motion-smooth);
+}
+
 /* ICON */
 
 .accordion-icon {
@@ -536,9 +546,9 @@ img {
    max-height: 0;
    overflow: hidden;
    transition:
-      max-height 0.65s var(--motion-smooth),
-      opacity 0.45s ease-out,
-      transform 0.65s var(--motion-smooth);
+      max-height 0.8s var(--motion-smooth),
+      opacity 0.5s ease-out,
+      transform 0.8s var(--motion-smooth);
    opacity: 0;
    padding-right: 80px;
 }
@@ -550,36 +560,36 @@ img {
 
 /* ACTIVE */
 
-.accordion-item.active .accordion-content {
-  max-height: 800px;
-  opacity: 1;
+.accordion-item.active .accordion-number {
+  transform: scale(1.05);
 }
 
-.accordion-item.active .accordion-icon {
-  transform: rotate(180deg);
+.accordion-item.active .accordion-titles h3 {
+  transform: scale(1.02);
 }
 
 /* ZOOM EFFECT */
 
 .funciona-accordion.has-active 
 .accordion-item:not(.active) .accordion-number {
-  transform: scale(0.92);
+  transform: scale(0.88);
+  opacity: 0.65;
+  filter: blur(0.2px);
+  transform: translateY(4px);
 }
 
 .funciona-accordion.has-active 
 .accordion-item:not(.active) .accordion-titles h3 {
-  font-size: 1.55rem;
+  transform: scale(0.92);
+  opacity: 0.7;
+  transform: translateY(4px);
 }
 
 .funciona-accordion.has-active 
 .accordion-item:not(.active) .accordion-titles p {
-  font-size: 0.98rem;
-}
-
-.accordion-item.active .accordion-number,
-.accordion-item.active .accordion-titles {
-  transform: scale(1);
-  opacity: 1;
+  transform: scale(0.92);
+  opacity: 0.7;
+  transform: translateY(4px);
 }
 
 /* MINI FAQ */
