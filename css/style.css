@@ -556,13 +556,13 @@ img {
 
 .accordion-content p {
   margin-top: 20px;
-  line-height: 1.9;
+  line-height: 1.4;
 }
 
 /* ACTIVE */
 
 .accordion-item.active .accordion-number {
-  transform: scale(1.05);
+  transform: scale(1.2);
 }
 
 .accordion-item.active .accordion-content {
@@ -572,7 +572,7 @@ img {
 }
 
 .accordion-item.active .accordion-titles h3 {
-  transform: scale(1.02);
+  transform: scale(1.2);
 }
 
 /* ZOOM EFFECT */
