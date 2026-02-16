@@ -4,9 +4,11 @@
 const menuBtn = document.querySelector('.menu-mobile');
 const nav = document.querySelector('.nav');
 
-menuBtn.addEventListener('click', () => {
-  nav.classList.toggle('nav-open');
-});
+if(menuBtn){
+  menuBtn.addEventListener('click', () => {
+    nav.classList.toggle('nav-open');
+  });
+}
 
 /* ================================
    HEADER COM TRANSIÇÃO AO SCROLL
@@ -51,11 +53,11 @@ const accordionItems = document.querySelectorAll(".accordion-item");
 
 accordionItems.forEach(item => {
 
-   const header = item.querySelector(".accordion-header");
+   const accordionHeader = item.querySelector(".accordion-header");
    
    if(!header) return;
    
-   header.addEventListener("click", () => {
+   accordionHeader.addEventListener("click", () => {
 
     const isActive = item.classList.contains("active");
 
@@ -80,5 +82,6 @@ function updateAccordionState() {
 }
 
 updateAccordionState();
+
 
 
