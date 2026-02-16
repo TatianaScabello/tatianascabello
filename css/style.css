@@ -562,7 +562,7 @@ img {
 /* ACTIVE */
 
 .accordion-item.active .accordion-number {
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 
 .accordion-item.active .accordion-content {
@@ -572,7 +572,7 @@ img {
 }
 
 .accordion-item.active .accordion-titles h3 {
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 
 /* ZOOM EFFECT */
