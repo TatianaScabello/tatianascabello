@@ -675,16 +675,114 @@ img {
   border: none;
 }
 
-/* ================================
+/* ===========================
    FOOTER
-================================ */
+=========================== */
+
 .footer {
-  background: rgba(255,255,255,0.4);
-  padding: 60px 0;
-  color: var(--accent);
+  background: #495867;
+  color: #fff;
+  padding-top: 70px;
 }
-.container .footer-grid{
-  color: var(--accent);
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 50px;
+  padding-bottom: 50px;
+}
+
+
+/* BRAND */
+
+.footer-brand h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.footer-tagline {
+  color: #C3DAC3;
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+.footer-cred {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+
+/* NAV */
+
+.footer-nav h4,
+.footer-contact h4 {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.footer-nav a {
+  display: block;
+  margin-bottom: 10px;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: 0.3s;
+}
+
+.footer-nav a:hover {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+
+/* SOCIAL */
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.footer-social a {
+  font-size: 1.3rem;
+  color: #C3DAC3;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  color: #FF8360;
+}
+
+
+/* BOTÃO */
+
+.btn-footer {
+  display: inline-block;
+  margin-top: 10px;
+  background: #FF8360;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.btn-footer:hover {
+  transform: translateY(-2px);
+}
+
+
+/* LINHA FINAL */
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.15);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.85rem;
+  opacity: 0.7;
 }
 
 /* ================================
@@ -730,4 +828,25 @@ img {
     box-shadow: var(--shadow);
     z-index: 1000;
   }
+}
+@media (max-width: 768px) {
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-nav a:hover {
+    transform: none;
+  }
+
+  .btn-footer {
+    width: 100%;
+    max-width: 260px;
+  }
+
 }
