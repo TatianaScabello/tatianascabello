@@ -4,9 +4,17 @@
 const menuBtn = document.querySelector('.menu-mobile');
 const nav = document.querySelector('.nav');
 
-if(menuBtn){
+if(menuBtn && nav){
   menuBtn.addEventListener('click', () => {
     nav.classList.toggle('nav-open');
+    menuBtn.setAttribute('aria-expanded', nav.classList.contains('nav-open'));
+  });
+
+  nav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('nav-open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
   });
 }
 
@@ -32,20 +40,22 @@ window.addEventListener('scroll', () => {
 const btnWhatsapp = document.getElementById('btn-whatsapp');
 const inputNome = document.getElementById('nome');
 
-btnWhatsapp.addEventListener('click', () => {
-  const nome = inputNome.value.trim();
-  let mensagem = '';
+if (btnWhatsapp && inputNome) {
+  btnWhatsapp.addEventListener('click', () => {
+    const nome = inputNome.value.trim();
+    let mensagem = '';
 
-  if (nome !== '') {
-    mensagem = `Olá, meu nome é ${nome}. Gostaria de marcar uma consulta.`;
-  } else {
-    mensagem = 'Olá, gostaria de marcar uma consulta.';
-  }
+    if (nome !== '') {
+      mensagem = `Olá, meu nome é ${nome}. Gostaria de marcar uma consulta.`;
+    } else {
+      mensagem = 'Olá, gostaria de marcar uma consulta.';
+    }
 
-  const telefone = '5511994504082';
-  const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
-  window.open(url, '_blank');
-});
+    const telefone = '5511994504082';
+    const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, '_blank');
+  });
+}
 
 /* ================= ACCORDION FUNCIONA ================= */
 
@@ -55,7 +65,7 @@ accordionItems.forEach(item => {
 
    const accordionHeader = item.querySelector(".accordion-header");
    
-   if(!header) return;
+   if(!accordionHeader) return;
    
    accordionHeader.addEventListener("click", () => {
 
