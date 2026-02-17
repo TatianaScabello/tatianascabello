@@ -95,3 +95,26 @@ updateAccordionState();
 
 
 
+
+
+const floatingScheduleBtn = document.querySelector('.btn-flutuante-mobile');
+const scheduleButtons = Array.from(document.querySelectorAll('a.btn-primary, .btn-footer'))
+  .filter((button) => button.textContent.toLowerCase().includes('agendar consulta'));
+
+function isFullyVisibleInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return rect.top >= 0 && rect.bottom <= window.innerHeight;
+}
+
+function toggleFloatingScheduleButton() {
+  if (!floatingScheduleBtn) return;
+
+  const shouldHide = scheduleButtons.some(isFullyVisibleInViewport);
+  floatingScheduleBtn.classList.toggle('hidden', shouldHide);
+}
+
+if (floatingScheduleBtn) {
+  window.addEventListener('scroll', toggleFloatingScheduleButton, { passive: true });
+  window.addEventListener('resize', toggleFloatingScheduleButton);
+  toggleFloatingScheduleButton();
+}
