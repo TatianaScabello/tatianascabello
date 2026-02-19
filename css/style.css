@@ -292,6 +292,7 @@ img {
 }
 .sobre-mobile {
   display: none;
+   padding: 0 12px;
 }
 
 /* ================= ATUAÇÃO ================= */
@@ -541,6 +542,12 @@ img {
 .accordion-icon {
   font-size: 2rem;
   transition: transform 0.55s var(--motion-smooth);
+  transform-origin: center;
+  display: inline-block;
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(180deg);
 }
 
 /* CONTENT */
@@ -1010,16 +1017,6 @@ img {
   .accordion-titles p {
     display: none;
   }
-
-  .accordion-icon {
-    font-size: 2rem;
-    margin-left: 12px;
-    transition: transform 0.4s var(--motion-smooth);
-  }
-
-   .accordion-item.active .accordion-icon {
-      transform: rotate(180deg);
-   }
 
   .accordion-content {
     padding-right: 0;
