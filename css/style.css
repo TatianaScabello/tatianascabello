@@ -582,20 +582,20 @@ img {
 
 .funciona-accordion.has-active 
 .accordion-item:not(.active) .accordion-number {
-  transform: scale(0.88) translateY(4px);
+  transform: scale(0.88) translateY(0px);
   opacity: 0.7;
   filter: blur(0.2px);
 }
 
 .funciona-accordion.has-active 
 .accordion-item:not(.active) .accordion-titles h3 {
-  transform: scale(0.92) translateY(4px);
+  transform: scale(0.92) translateY(0px);
   opacity: 0.7;
 }
 
 .funciona-accordion.has-active 
 .accordion-item:not(.active) .accordion-titles p {
-  transform: scale(0.92) translateY(4px);
+  transform: scale(0.92) translateY(0px);
   opacity: 0.7;
 }
 
