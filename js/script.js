@@ -59,40 +59,31 @@ if (btnWhatsapp && inputNome) {
 
 /* ================= ACCORDION FUNCIONA ================= */
 
-const accordionItems = document.querySelectorAll(".accordion-item");
-
-accordionItems.forEach(item => {
-
-   const accordionHeader = item.querySelector(".accordion-header");
-   
-   if(!accordionHeader) return;
-   
-   accordionHeader.addEventListener("click", () => {
+document.querySelectorAll(".accordion-header").forEach(header => {
+  header.addEventListener("click", () => {
+    const item = header.parentElement;
+    const accordion = document.querySelector(".funciona-accordion");
 
     const isActive = item.classList.contains("active");
 
-    accordionItems.forEach(i => i.classList.remove("active"));
+    // Fecha todos
+    document.querySelectorAll(".accordion-item").forEach(i => {
+      i.classList.remove("active");
+    });
 
     if (!isActive) {
       item.classList.add("active");
     }
 
-    updateAccordionState();
-
+    // adiciona classe auxiliar para efeito zoom
+    const anyActive = document.querySelector(".accordion-item.active");
+    if (anyActive) {
+      accordion.classList.add("has-active");
+    } else {
+      accordion.classList.remove("has-active");
+    }
   });
-
 });
-
-function updateAccordionState() {
-
-  const hasActive = document.querySelector(".accordion-item.active");
-
-  document.querySelector(".funciona-accordion")
-    .classList.toggle("has-active", !!hasActive);
-}
-
-updateAccordionState();
-
 
 
 
