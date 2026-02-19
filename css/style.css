@@ -290,6 +290,10 @@ img {
   font-size: 1.05rem;
   line-height: 1.9;
 }
+.sobre-desktop {
+  display: block;
+}
+
 .sobre-mobile {
   display: none;
    padding: 0 12px;
@@ -1098,13 +1102,16 @@ img {
     width: min(100%, 300px);
   }
 
-   .sobre-desktop {
-      display: none;
-   }
-   
-   .sobre-mobile {
-      display: block;
-   }
+  .sobre-desktop {
+    display: none;
+  }
+
+  .sobre-mobile {
+    display: block;
+    padding: 0 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
    
   .accordion-titles h3 {
     font-size: 1.1rem;
