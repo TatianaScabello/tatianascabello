@@ -290,6 +290,9 @@ img {
   font-size: 1.05rem;
   line-height: 1.9;
 }
+.sobre-mobile {
+  display: none;
+}
 
 /* ================= ATUAÇÃO ================= */
 
@@ -1009,9 +1012,14 @@ img {
   }
 
   .accordion-icon {
-    font-size: 1.4rem;
+    font-size: 2rem;
     margin-left: 12px;
+    transition: transform 0.4s var(--motion-smooth);
   }
+
+   .accordion-item.active .accordion-icon {
+      transform: rotate(180deg);
+   }
 
   .accordion-content {
     padding-right: 0;
@@ -1093,9 +1101,18 @@ img {
     width: min(100%, 300px);
   }
 
+   .sobre-desktop {
+      display: none;
+   }
+   
+   .sobre-mobile {
+      display: block;
+   }
+   
   .accordion-titles h3 {
     font-size: 1.1rem;
   }
+   
 }
 
 @media (max-width: 768px) {
