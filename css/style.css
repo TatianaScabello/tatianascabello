@@ -57,7 +57,10 @@ body {
 h1, h2, h3 {
   letter-spacing: 0.5px;
 }
-
+.seo-hidden {
+  position: absolute;
+  left: -9999px;
+}
 img {
   width: 100%;
   border-radius: var(--radius);
